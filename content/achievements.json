@@ -1,0 +1,816 @@
+{
+  "updated": "2026-09-10",
+  "papers": [
+    {
+      "authors": "B. Y. Kang, K. Murakami, K. Watanabe,* Y. Yamada, K. Aso, R. Kanno, M. Hirayama,*",
+      "title": "3-Dimensional Conductive Pathways in Microstructure-Controlled Composite Cathodes for All-Solid-State Batteries",
+      "citation": "Batteries & Supercaps 2026, 9, e70321.",
+      "year": "2026",
+      "note": "(selected as a front cover)",
+      "url": ""
+    },
+    {
+      "authors": "K. Aso, H. Ito, S. Asano, T. Kakeya, K. Yamanaka, K. Taniguchi, Y. Li, K. Watanabe, M. Hirayama,* Y. Oshima,*",
+      "title": "Atomic-Resolution Electron Microscopy of Cathode–Electrolyte Interfacial Degradation: Zr-Based Oxide-Coated Regions Preserve Layered LiCoO2",
+      "citation": "Batteries & Supercaps 2026, 9, e70318.",
+      "year": "2026",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "K. Aso, T. Kakeya, T. Tsuchida, H. Ito, S. Asano, K. Watanabe, K. Mitsuishi, K. Kimoto, K. Shinoda, T. Masuda,* M. Hirayama,* Y. Oshima,*",
+      "title": "Low-Dose Nanoscale Visualization of Crystal Phases in Epitaxial Cathodes via Cepstral Matching of Scanning Nanobeam Electron Diffraction",
+      "citation": "Nano Lett., 2025, 25, 15840.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "M. Shishido, S. Takahashi, S. Hori, K. Watanabe, K. Suzuki, R. Kanno, K. Nakamura, T. Abe, H. Hanawa, M. Hirayama,*",
+      "title": "Fabrication and Lithium Intercalation Properties of Graphite-Li10P3S12Br Anode Composites",
+      "citation": "Mater. Trans. 2025, 66, 1432.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "Y. Li, K. Watanabe, K. Ito, K. Shimizu, K. Suzuki, R. Kanno, K. Tamura, M. Hirayama,*",
+      "title": "Structural Observation of Cathode/Sulfide Electrolyte Interface in All-Solid-State Batteries by In Situ Thin-Film X-ray Diffraction",
+      "citation": "Mater. Trans. 2025, 66, 1493.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe, H.-S. Kim, Y. Hasegawa, S. Thompson, T. R. Guimaraes, R. Kanno, P. B. Zetterlund, M. Hirayama,*",
+      "title": "Dual modification of LiNbO3 and a lithium-conducting organic polymer at LiCoO2/Li10GeP2S12 interface and lithium intercalation properties in all-solid-state lithium-ion batteries",
+      "citation": "RSC Appl. Interfaces 2025, 2, 1821.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe,* S. Kawai, K. Shimizu, K. Suzuki, R. Kanno, M. Hirayama",
+      "title": "Standard Li+/Li redox potential at the Li/amorphous-Li3PO4 interface probed by photoelectron spectroscopy for all-solid-state (photo)electrochemical systems",
+      "citation": "Appl. Phys. Lett., 2025, 127, 083906.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe,* H.-S. Kim, K. Hikima, N. Matsui, K. Suzuki, H. Muto, A. Matsuda, R. Kanno, M. Hirayama,*",
+      "title": "Self-Closing of Cracks Generated in Microstructure-Controlled 400 µm-Thick Composite Cathodes for All-Solid-State Batteries: Observed by In Situ Scanning Electron Microscopy with Energy-Dispersive X-Ray Spectroscopy",
+      "citation": "Batteries & Supercaps 2025, 8, e202500119.",
+      "year": "2025",
+      "note": "(selected as a front cover)",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe,* H. Nakayama, H.-S. Kim, K. Hikima, N. Matsui, K. Suzuki, S. Obokata, H. Muto, A. Matsuda, R. Kanno, M. Hirayama,*",
+      "title": "Sn vs. Ge: Effects of Elastic and Plastic Deformation of LGPS-type Solid Electrolytes on Charge-discharge Properties of Composite Cathodes for All-solid-state Batteries",
+      "citation": "Electrochemistry, 2025, 93, 063019.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "S. W. Thompson, T. R. Guimarães, K. Watanabe, M. Hirayama,* P. B. Zetterlund*",
+      "title": "Encapsulation of LiCoO2 particles with lithium containing polymer for solid state lithium-ion battery cathodes",
+      "citation": "Polymer, 2025, 324, 128255.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "T. Hirose, N. Matsui,* K. Watanabe, T. Saito, K. Mori, K. Suzuki, M. Hirayama,* R. Kanno*",
+      "title": "A trade-off between migration and association energies for hydride-ion conductivity in the SrLiH3–CaLiH3–NaLiH2 system",
+      "citation": "Dalton Trans., 2025, 54, 4180.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "T. Nakayama, K. Watanabe, Y. Iwamizu, K. Suzuki,* N. Matsui, A. Seko, I. Tanaka, R. Kanno, M. Hirayama",
+      "title": "Simultaneous Exploration of Candidates for Electrode and Electrolyte Materials for All-Solid-State Batteries Using Predicted Rating from a Recommender System",
+      "citation": "ACS Appl. Energy Mater., 2025, 8, 2260.",
+      "year": "2025",
+      "note": "(selected as a supplementary cover)",
+      "url": ""
+    },
+    {
+      "authors": "A. Banik, H. Maekawa, J. Fajardo, B. Zutter, F. M. Alcorn, S. Kumar, K. Watanabe, A. Kudo, N.-H. Ge,* A. A. Talin,* J. B. Sambur*",
+      "title": "Unequal {110} Facets: The Potential Role of Intraparticle Heterogeneity and Facet Termination in Photoelectrochemical Activity of Single BiVO4 Particles",
+      "citation": "ACS Nano, 2025, 19, 6250.",
+      "year": "2025",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "Y. Miseki,* M. Tamano, K. Watanabe, K. Sayama*",
+      "title": "Demonstration of scalable water splitting into H2 and O2 by a flow-type photocatalysis-electrolysis hybrid system using a highly stable photocatalyst",
+      "citation": "ACS Appl. Mater. Interface, 2024, 16, 60219.",
+      "year": "2024",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "L. Barrera, B. W. Layne, Z. Chen, K. Watanabe, A. Kudo, D. V. Esposito, S. Ardo, R. B. Chandran*",
+      "title": "Revealing the Role of Redox Reaction Selectivity and Mass Transfer in Current–Voltage Predictions for Ensembles of Photocatalysts",
+      "citation": "Energy Environ. Sci., 2024, 17, 8254.",
+      "year": "2024",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "K. Kaiya, Y. Ueki, H. Kawamoto, K. Watanabe, S. Yoshino, Y. Yamaguchi, A. Kudo*",
+      "title": "Water splitting over transition metal-doped SrTiO3 photocatalysts with response to visible light up to 660 nm",
+      "citation": "Chem. Sci., 2024, 15, 16025.",
+      "year": "2024",
+      "note": "(selected as an inside front cover)",
+      "url": ""
+    },
+    {
+      "authors": "P. Jiang, H. Zhou, S. Song, K. Suzuki, K. Watanabe, Y. Yamaguchi, N. Matsui, S. Hori, R. Kanno, M. Hirayama*",
+      "title": "A composite cathode with a three-dimensional ion/electron-conducting structure for all-solid-state lithium–sulfur batteries",
+      "citation": "Commun. Mater., 2024, 5, 105.",
+      "year": "2024",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "H. Kim, K. Hikima, K. Watanabe, N. Matsui, K. Suzuki, S. Obokata, H. Muto, A. Matsuda, R. Kanno, and M. Hirayama*",
+      "title": "Mechanical Properties of Li10.35Ge1.35P1.65S12 with Different Particle Sizes",
+      "citation": "Mater. Trans., 2024, 65, 861.",
+      "year": "2024",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "K. Ito, K. Tamura, K. Shimizu, N. L. Yamada, K. Watanabe, K. Suzuki, M. Hirayama*",
+      "title": "Degradation of a lithium cobalt oxide cathode under high voltage operation at an interface with an oxide solid electrolyte",
+      "citation": "RSC Appl. Interfaces, 2024, 1, 790.",
+      "year": "2024",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "D. Kang, K. Ito, K. Shimizu, K. Watanabe, N. Matsui, K. Suzuki, R. Kanno, M. Hirayama*",
+      "title": "Fabrication and High-temperature Electrochemical Stability of LiFePO4 Cathode/Li3PO4 Electrolyte Interface",
+      "citation": "Electrochemistry, 2024, 92, 037008.",
+      "year": "2024",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "M. Yoshimoto, K. Tamura, K. Watanabe,* K. Shimizu, T. Kobayashi, H. Tsurita, Y. Horisawa, K. Suzuki, R. Kanno, M. Hirayama*",
+      "title": "Intercalative and non-intercalative photo-recharge using all-solid-state cells for solar energy conversion and storage",
+      "citation": "Sustainable Energy Fuels, 2024, 8, 1236–1244.",
+      "year": "2024",
+      "note": "(selected as an inside front cover)",
+      "url": ""
+    },
+    {
+      "authors": "S. Asano, J. Hata, K. Watanabe, N. Matsui, K. Suzuki, R. Kanno, M. Hirayama*",
+      "title": "Interfacial structure changes between amorphous silicon anode/liquid electrolyte using a highly dense and flat model electrode",
+      "citation": "J. Solid State Electrochem., 2024, 28, 4491–4501.",
+      "year": "2024",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "S. Asano, J. Hata, K. Watanabe, K. Shimizu, N. Matsui, N. L. Yamada, K. Suzuki, R. Kanno, M. Hirayama*",
+      "title": "Formation Processes of a Solid Electrolyte Interphase at a Silicon/Sulfide Electrolyte Interface in a Model All-Solid-State Li-Ion Battery",
+      "citation": "ACS Appl. Mater. Interfaces, 2024, 16, 7189–7199.",
+      "year": "2024",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "J. Nakayama, H. Zhou, J. Izumi, K. Watanabe, K. Suzuki, F. Nemoto, N. L. Yamada, R. Kanno, M. Hirayama*",
+      "title": "Electrical Double Layer Formation at Intercalation Cathode–Organic Electrolyte Interfaces During Initial Lithium-Ion Battery Reactions",
+      "citation": "Adv. Mater. Interfaces, 2024, 11, 2300780.",
+      "year": "2024",
+      "note": "(selected as a front cover)",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe,* Y. Horisawa, M. Yoshimoto, K. Tamura, K. Suzuki, R. Kanno, M. Hirayama*",
+      "title": "Stable Photoelectrochemical Reactions at Solid/Solid Interfaces toward Solar Energy Conversion and Storage",
+      "citation": "Nano Lett., 2024, 24, 1916–1922.",
+      "year": "2024",
+      "note": "(selected as a supplementary cover)",
+      "url": ""
+    },
+    {
+      "authors": "H. Zhou, J. Izumi, S. Asano, K. Ito, K. Watanabe, K. Suzuki, F. Nemoto, N. L. Yamada, K. Aso, Y. Oshima, R. Kanno, M. Hirayama*",
+      "title": "Fast Lithium Intercalation Mechanism on Surface‐Modified Cathodes for Lithium‐Ion Batteries",
+      "citation": "Adv. Energy Mater., 2023, 2302402.",
+      "year": "2023",
+      "note": "(selected as a back cover)",
+      "url": ""
+    },
+    {
+      "authors": "H. S. Kim, K. Watanabe, N. Matsui, K. Suzuki, R. Kanno, M. Hirayama*",
+      "title": "Crack Suppression by Downsizing Sulfide-Electrolyte Particles for High-Current-Density Operation of Metal/Alloy Anodes",
+      "citation": "Batteries Supercaps, 2023, 6, e202300306.",
+      "year": "2023",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "Y. Yamada, K. Watanabe, H. S. Kim, K. Suzuki, S. Hori, R. Kanno, M. Hirayama*",
+      "title": "Microstructure Control of LiCoO2-Li10GeP2S12 Composite Cathodes by Adjusting the Particle Size Distribution for the Enhancement of All-Solid-State Batteries",
+      "citation": "Batteries Supercaps, 2023, 6, e202300261.",
+      "year": "2023",
+      "note": "(selected as a front cover, Very Important Paper (VIP), Special Collection “Solid State Batteries”)",
+      "url": ""
+    },
+    {
+      "authors": "T. Yabuzaki, M. Sato, H. Kim, K. Watanabe, N. Matsui, K. Suzuki, S. Hori, K. Hikima, S. Obokata, H. Muto, A. Matsuda, R. Kanno M. Hirayama*",
+      "title": "Electrochemical and mechanical properties and chemical stability of Li10GeP2S12/Al2O3 composite electrolytes",
+      "citation": "J. Ceram. Soc. Jpn., 2023, 131, 675–684.",
+      "year": "2023",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "T. Noda, H. Kim, K. Watanabe, K. Suzuki, N. Matsui, R. Kanno M. Hirayama*",
+      "title": "Direct tracking of reaction distribution in an all-solid-state battery using operando scanning electron microscopy with energy dispersive X-ray spectroscopy",
+      "citation": "J. Ceram. Soc. Jpn., 2023, 131, 651–658.",
+      "year": "2023",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "B. Zutter, Z. Chen, L. Barrera, W. Gaieck, A. S. Lapp, K. Watanabe, A. Kudo, D. V. Esposito, R. Bala Chandran, S. Ardo, A. A. Talin*",
+      "title": "Single-Particle Measurements Reveal the Origin of Low Solar-to-Hydrogen Efficiency of Rh-Doped SrTiO3 Photocatalysts",
+      "citation": "ACS Nano, 2023, 17, 9405–9414.",
+      "year": "2023",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe, Y. Miseki,* K. Sayama*",
+      "title": "Cs,Rh-codoped WO3 with a core-shell structure responsive up to 600 nm as an O2-evolving photocatalyst for Z-schematic water splitting",
+      "citation": "Sustainable Energy Fuels, 2022, 6, 3591–3598.",
+      "year": "2022",
+      "note": "",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe, Y. Iikubo, Y. Yamaguchi, A. Kudo*",
+      "title": "Highly crystalline Na0.5Bi0.5TiO3 of a photocatalyst valence-band-controlled with Bi(III) for solar water splitting",
+      "citation": "Chem. Commun., 2021, 57, 323–326.",
+      "year": "2021",
+      "note": "(selected as an outside back cover)",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe, K. Iwashina, A. Iwase, S. Nozawa, S. Adachi, A. Kudo*",
+      "title": "New Visible-Light-Driven H2- and O2-Evolving Photocatalysts Developed by Ag(I) and Cu(I) Ion Exchange of Various Layered and Tunneling Metal Oxides Using Molten Salts Treatments",
+      "citation": "Chem. Mater., 2020, 32, 10524–10537.",
+      "year": "2020",
+      "note": "(selected as a supplementary cover)",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe, A. Iwase, A. Kudo*",
+      "title": "Solar water splitting over Rh0.5Cr1.5O3-loaded AgTaO3 of a valence-band-controlled metal oxide photocatalyst",
+      "citation": "Chem. Sci., 2020, 11, 2330–2334.",
+      "year": "2020",
+      "note": "(selected as an outside front cover, a 2020 Chemical Science HOT Article Collection, and a 2020 ChemSci Pick of the Week Collection)",
+      "url": ""
+    },
+    {
+      "authors": "K. Watanabe, A. Iwase, S. Nozawa, S. Adachi, A. Kudo*",
+      "title": "Effects of Coapplication of Rh-Doping and Ag-Substitution on the Band Structure of Li2TiO3 and the Photocatalytic Property",
+      "citation": "ACS Sustainable Chem. Eng., 2019, 7, 9881–9887.",
+      "year": "2019",
+      "note": "(selected as a supplementary cover)",
+      "url": ""
+    }
+  ],
+  "books": [
+    [
+      "K. Watanabe, M. Hirayama,",
+      "“Photo-Rechargeable All-Solid-State Batteries Based on Photoelectrochemistry and Solid-State Ionics”",
+      "Chapter 4 in Solar Capacitors and Batteries, John Wiley & Sons, Ltd, 2026, 83–104."
+    ],
+    [
+      "渡邊健太，平山雅章",
+      "“全固体電池とイオン伝導体”，電気計算，2024, 4, 27–32."
+    ],
+    [
+      "渡邊健太",
+      "““正しい”光触媒によるCO2還元　条件を見極めよう”，化学（CHEMISTRY），2023, 78, 57-58."
+    ],
+    [
+      "渡邊健太",
+      "“人工光合成：光触媒を用いたソーラー水分解によるグリーン水素製造”，",
+      "東京理科大学 科学フォーラム（Science Forum）, 2023, 40, 54–55."
+    ],
+    [
+      "渡邊健太",
+      "“魔の川”，カーボン・エネルギーコントロール社会協議会（CanApple）　ニュースレター,　2022, 第248号."
+    ],
+    [
+      "渡邊健太",
+      "“ソーラー水分解を目指した価電子帯制御型金属酸化物光触媒の開発”",
+      "触媒（Catalysts and Catalysis）, 2022, 64, 263–266."
+    ],
+    [
+      "渡邊健太，山口友一，工藤昭彦",
+      "“Ag(I)とBi(III)の相乗効果によって価電子帯上端が引き上げられたAgTaO3-Na0.5Bi0.5TiO3固溶体光触媒を用いた水分解”",
+      "触媒（Catalysts and Catalysis）, 2020, 62, 60–62."
+    ]
+  ],
+  "patents": [
+    [
+      "渡邊健太，草間仁，佐山和弘，三石雄悟",
+      "“光触媒およびその製造方法，ならびに光触媒を用いた酸素製造方法および水素製造方法”",
+      "特開2024-010721，公開日2024年1月25日．"
+    ],
+    [
+      "工藤昭彦，海谷恭平，山口友一，吉野隼矢，渡邊健太，新城亮",
+      "“光触媒並びにこれを用いた水素及び酸素の製造方法”",
+      "特開2023-076230, 公開日2023年6月1日"
+    ]
+  ],
+  "awards": [
+    [
+      "2025年度 東京科学大学物質理工学院・研究奨励賞",
+      "渡邊健太",
+      "“走査型電子/プローブ顕微鏡を用いた全固体電池用複合体電極の",
+      "微細構造と三次元的電子/イオン伝導経路の相関関係の解明”",
+      "2025年9月24日"
+    ],
+    [
+      "2025年度 東京科学大学第2回社会変革チャレンジ賞",
+      "渡邊健太",
+      "“新規光機能デバイスの創成を志向した全固体電気化学系で動作するLi+脱挿入性光電極の開発と",
+      "動作原理解明”",
+      "2025年6月26日"
+    ],
+    [
+      "2024年度 東京工業大学物質理工学院・研究奨励賞",
+      "渡邊健太",
+      "“全固体系におけるLi+脱挿入能を有するp型半導体光電極の開発および動作原理解明”",
+      "2024年9月18日"
+    ],
+    [
+      "2023年度 東京工業大学物質理工学院・研究奨励賞",
+      "渡邊健太",
+      "“全固体電池内部のoperando SEM-EDXによる作動機構解明と微細構造制御”",
+      "2023年9月22日"
+    ],
+    [
+      "東京理科大学理窓博士会 第16回学術奨励賞",
+      "渡邊健太",
+      "“Development of Valence-Band-Controlled Metal Oxide Photocatalysts for Water Splitting as Artificial",
+      "Photosynthesis”",
+      "2022年11月5日"
+    ],
+    [
+      "The 3rd International Symposium on Recent Progress of Energy and Environmental Photocatalysis",
+      "(Photocatalysis 3), Poster Award",
+      "K. Watanabe, A. Iwase, A. Kudo",
+      "“Water Splitting over AgTaO3 of a Valence-Band-Controlled Photocatalyst Improved by Loading",
+      "Rh0.5Cr1.5O3-cocatalyst”",
+      "Nov. 29, 2019"
+    ],
+    [
+      "触媒学会若手会「第40回夏の研修会」，優秀口頭発表賞第1位",
+      "渡邊健太",
+      "“価電子帯制御型光触媒であるAgTaO3を用いた高効率な一段階励起型ソーラー水分解”",
+      "2019年8月1日"
+    ],
+    [
+      "第38回光がかかわる触媒化学シンポジウム，優秀ポスター賞",
+      "渡邊健太，岩瀬顕秀，工藤昭彦",
+      "“価電子帯制御型光触媒であるAgTaO3を用いた高効率ソーラー水分解”",
+      "2019年6月21日"
+    ],
+    [
+      "第6回JACI/GSCシンポジウム，GSCポスター賞",
+      "渡邊健太，岩瀬顕秀，工藤昭彦",
+      "“Cu(I)を構成元素に含む層状酸化物光触媒による可視光水素製造”",
+      "2017年7月4日"
+    ]
+  ],
+  "invited": [
+    [
+      "K. Watanabe (Invited)",
+      "\"Photoelectrochemical Reactions in All-Solid-State Systems toward Solar Energy Conversion and Storage\"",
+      "Materials Research Meeting (MRM) 2025, Dec. 12. 2025 (Pacifico Yokohama)"
+    ],
+    [
+      "K. Watanabe (Featured Speaker)",
+      "\"Stable Photoelectrochemical Oxidation Followed by Li+-deintercalation at Solid/Solid",
+      "Interfaces Toward Solar Energy and Conversion\"",
+      "5th International Conference on Materials Science and Nanotechnology (Future Materials 2024), Oct. 25. 2024. (Virtual)"
+    ],
+    [
+      "K. Watanabe (Keynote)",
+      "\"Stable photoelectrochemical reactions at semiconductor/solid-electrolyte interfaces for solar energy conversion and storage\"",
+      "2nd Global Congress on Catalysis and Chemical Engineering (GCCCE-2024), Mar. 26. 2024. (Virtual)"
+    ]
+  ],
+  "international": [
+    [
+      "P. Jiang, H. Zhou, S. Song, K. Suzuki, K. Watanabe, Y. Yamaguchi, N. Matsui, S. Hori, R. Kanno, M. Hirayama,",
+      "\"A Liquid-Phase-Synthesized Cathode Composite with a Three-Dimensional Ion/Electron-Conducting Structure for All-Solid-State Lithium–Sulfur Batteries\",",
+      "PRiME2024, A08-1197, Oct. 8. 2024. (Hawaii, USA)"
+    ],
+    [
+      "T. Hirose, N. Matsui, K. Watanabe, T. Saito, K. Mori, K. Suzuki, R. Kanno, M. Hirayama,",
+      "\"Optimization of Hydride–Ion Conductivity of Perovskite–Type Structure in SrLiH3–CaLiH3–NaLiH2 Quasi–Ternary System\",",
+      "PRiME2024, Z01-4433, Oct. 8. 2024. (Hawaii, USA)"
+    ],
+    [
+      "Masaaki Hirayama, Kenta Watanabe, Keisuke Shimizu, Kota Suzuki, Ryoji Kanno, Kazuhisa Tamura, L. Norifumi Yamada (Invited),",
+      "\"Direct Observation at Cathode/Solid Electrolyte Interfaces Using Thin-film Batteries\",",
+      "The 14th Japan-France Joint Seminar on Battery, O41, Sep. 7. 2024. (Kunibiki Messe, Japan)"
+    ],
+    [
+      "Hikaru Okudaira, Takumi Yabuzaki, Kenta Watanabe, Kota Suzuki, Ryoji Kanno, Masaaki Hirayama,",
+      "\"Effects of oxygen substitution and additives on atmospheric stability of LGPS-type solid electrolytes\", The 14th Japan-France Joint Seminar on Battery, S25, Sep. 5. 2024. (Kunibiki Messe, Japan)"
+    ],
+    [
+      "Takashi Hirose, Naoki Matsui, Kenta Watanabe, Takashi Saito, Kazuhiro Mori, Kota Suzuki, Ryoji Kanno, Masaaki Hirayama,",
+      "\"Optimization of Hydride-Ion Conductivity of Perovskite-type structure in SrLiH3–CaLiH3–NaLiH2 Quasi-Ternary System\",",
+      "Solid State Ionics 2024, 595, Jul. 16. 2024. (London, UK)"
+    ],
+    [
+      "Masataka Yoshimoto, Kazuhisa Tamura, Kenta Watanabe, Keisuke Shimizu, Yuhei Horisawa, Kota Suzuki, Ryoji Kanno, Masaaki Hirayama,",
+      "\"Lithium Photo-extraction using all-solid-state photo-rechargeable battery for photo energy conversion and storage\",",
+      "Solid State Ionics 2024, 609, Jul. 15. 2024. (London, UK)"
+    ],
+    [
+      "T. Nakayama, K. Suzuki, N. Matsui, K. Watanabe, A. Seko, I. Tanaka, R. Kanno, M. Hirayama (Oral)",
+      "\"Searching for New Materials toward All-Solid-State Batteries Based on the Predicted Rating of Recommender System rather than constituent elements\",",
+      "3rd International Forum on Energy & Informatics, Dec. 13. 2023. (Bali, Indoesia)"
+    ],
+    [
+      "T. Hirose, N. Matsui, K. Watanabe, T. Saito, K. Mori, K. Suzuki, R. Kanno, M. Hirayama (Oral)",
+      "\"Hydride-Ion Conductivity of Perovskite-Type Solid Electrolytes in SrLiH3–CaLiH3–NaLiH2 Quasi-Ternary System\",",
+      "3rd International Forum on Energy & Informatics, Dec. 12. 2023. (Bali, Indoesia)"
+    ],
+    [
+      "Y. Wang, S. Oshima, K. Watanabe, N. Matsui, K. Suzuki, R. Kanno, M. Hirayama (Oral)",
+      "\"Interface Control of unmodified-LiCoO2/Li10GeP2S12–xOx Cathode Composites for All-Solid-Batteries\",",
+      "3rd International Forum on Energy & Informatics, Dec. 12. 2023. (Bali, Indoesia)"
+    ],
+    [
+      "P. Jiang, J. Cui, S. Song, H. Zhou, K. Suzuki, K. Watanabe, R. Kanno, M. Hirayama (Oral)",
+      "\"A Mixed-Conductive Li2S-Based Cathode Composite by a Liquid-Phase Process for All-Solid-State Lithium-Sulfur Battery\", Dec. 12. 2023. (Bali, Indoesia)"
+    ],
+    [
+      "T. Hirose, N. Matsui, K. Watanabe, K. Suzuki, T. Saito, T. Kamiyama, M. Hirayama, R. Kanno (Poster)",
+      "\"Hydride-Ion Conduction in AELiH3 (AE = Sr, Ba)\",",
+      "244th ECS Meeting, Oct. 10. 2023. (Gothenburg, Sweden)"
+    ],
+    [
+      "S. Asano, J. Hata, K. Watanabe, N. Matsui, K. Suzuki, R. Kanno, M. Hirayama (Oral)",
+      "\"Mechanical and Electrochemical Properties of Highly-Dense Li-Si Alloy Anodes Fabricated by Arc Plasma Deposition\",",
+      "244th ECS Meeting, Oct. 10. 2023. (Gothenburg, Sweden)"
+    ],
+    [
+      "M. Yoshimoto, K. Watanabe, K. Shimizu, K. Tamura, K. Suzuki, R. Kanno, M. Hirayama (Invited)",
+      "\"Demonstration of Reversible Photo-Assisted Lithium Extraction at Solid-Solid Interface toward Photo-Rechargeable Battery\",",
+      "2023 International Conference on Solid State Devices and Materials (SSDM2023), Sept. 8. 2023. (Nagoya)"
+    ],
+    [
+      "H. S. Kim, M. Hirayama, K. Watanabe, K. Suzuki, R. Kanno, K. Hikima, S. Obokata, H. Muto, A. Matsuda (Poster)",
+      "\"Strategy for Improving the Energy Density of All-Solid-State Batteries by Controlling LGPS Particle Size and Deformability\"",
+      "2023 International Conference on Solid State Devices and Materials (ssdm2023）, Sept. 8. 2023. (Nagoya)"
+    ],
+    [
+      "K. Watanabe, Y. Miseki, K. Sayama (Poster)",
+      "“Rh and Cs-codoped WO3 responding up to 600 nm as an O2-evolving photocatalyst for Z-schematic water splitting”",
+      "The 9th Tokyo Conference on Advanced Catalytic Science and Technology (TOCAT9), Jul. 25. 2022 (Virtual and Fukuoka, Japan)"
+    ],
+    [
+      "Z. Chen, S. Keene, W. Gaieck, K. Watanabe, R. Stinson, L. Barrera, B. Zutter, A. Lapp, M. Xu, A. Kudo, X. Pan, A. A. Talin; D. Esposito, R. B. Chandran, S. Ardo (Invited)",
+      "“Theoretical and experimental benefits of composite photocatalyst materials for artificial photosynthesis”",
+      "The International Chemical Congress of Pacific Basin Societies 2021 (Pacifichem 2021)，Dec. 17. 2021 (Virtual, USA)"
+    ],
+    [
+      "K. Watanabe, A. Iwase, A. Kudo (Poster)",
+      "“Water Splitting over AgTaO3 of a Valence-Band-Controlled Photocatalyst Improved by Loading Rh0.5Cr1.5O3-Cocatalyst”",
+      "The 3rd International Symposium on Recent Progress of Energy and Environmental Photocatalysis (Photocatalysis 3) Nov. 29, 2019 (Katsushika campus, Tokyo University of Science, Japan)"
+    ],
+    [
+      "T. Shinoda, N. Murakami, K. Watanabe, A. Kudo (Poster)",
+      "“Photoacoustic Spectroscopic Analysis of In-Gap States of Rhodium-Doped Strontium Titanate Treated by Ball Milling”",
+      "The 3rd International Solar Fuels Conference (ISF-3) / International Conference on Artificial Photosynthesis-2019 (ICARP2019), Nov. 22, 2019 (Hiroshima Convention Hall, Hiroshima, Japan)"
+    ],
+    [
+      "K. Watanabe, A. Iwase, A. Kudo (Oral)",
+      "“Solar Water Splitting over AgTaO3 of Valence-Band-Controlled Metal Oxide Photocatalyst Improved by a Rh0.5Cr1.5O3-Cocatalyst”",
+      "The 3rd biannual young meeting, preceding the International Solar Fuels Conference (ISF-3 Young), Nov. 19, 2019 (JMS Aster Plaza, Hiroshima, Japan)"
+    ],
+    [
+      "K. Watanabe, A. Iwase, A. Kudo (Poster) \n“Development of novel visible-light-driven photocatalysts by Ag(I)- and Cu(I)-substitution in layered perovskite oxides by molten salt treatments” \nThe 8th Tokyo Conference on Advanced Catalytic Science and Technology (TOCAT8), Aug. 8, 2018 (Pacifico Yokohama, Kanagawa, Japan)"
+    ],
+    [
+      "K. Watanabe, A. Iwase, A. Kudo (Poster) \n“Development of novel visible-light-driven phorocatalysts by Ag(I)- and Cu(I)-substitution in layered perovskite oxides by molten AgNO3 and CuCl treatments” \nThe 22nd International Conference on Photochemical Conversion and Storage of Solar Energy (IPS-22), July 30, 2018. (Hefei, China)"
+    ],
+    [
+      "K. Watanabe, A. Iwase, A. Kudo (Poster)",
+      "“Development of Novel Visible-Light-Driven Photocatalysts by Ag(I)- and Cu(I)-Substitution of Layered Perovskite Oxides”",
+      "The 2nd International Symposium on Recent Progress of Energy and Environmental Photocatalysis & the 23rd China-Japan Bilateral Symposium on Intelligent Electrophotonic Materials and Molecular Electronics (Photocatalysis 2 & SIEMME'23), December 2, 2017 (Katsushika campus, Tokyo University of Science, Japan)"
+    ],
+    [
+      "K. Watanabe, A. Iwase, and A. Kudo (Poster)",
+      "“Photocatalytic Properties AgLi1/3Ti2/3O2 Doped with M (M = Rh and Ir) and Sb”",
+      "First International Symposium on Recent Progress of Energy and Environmental Photocatalysis (Photocatalysis 1), Sep. 3, 2015 (Noda campus, Tokyo University of Science, Japan)"
+    ]
+  ],
+  "domestic": [
+    [
+      "李炎釗, 山中一輝, 渡邊健太, 清水啓祐, 田村和久, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“放射光X線回折を用いた硫化物全固体電池の高電位劣化機構解析”,",
+      "日本金属学会2025秋期（第177回）講演大会, S4.2, 2025年9月17日（北海道大学札幌キャンパス,）"
+    ],
+    [
+      "谷口広至, 淺野翔, 渡邊健太, 清水啓佑, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“プレリチウム化アモルファスSi薄膜の合成と充放電特性評価”,",
+      "2025電気化学秋季大会，S5_2_09, 2025年9月5日（鳥取大学 鳥取キャンパス）"
+    ],
+    [
+      "カン ビョンヨン, 渡邊 健太, 菅野 了次, 平山 雅章,",
+      "“Designing Microstructures of Thick Composite Cathodes with Low Tortuosity and Enhanced Interfacial Contacts for All-Solid-State Batteries with High Rate-Performance”,",
+      "2025電気化学秋季大会，S6-1_1_11, 2025年9月4日（鳥取大学 鳥取キャンパス）"
+    ],
+    [
+      "渡邊健太, 田村和久, 平山雅章,",
+      "“全固体系におけるLi+脱離を伴う光電気化学的酸化反応”,",
+      "第44回光がかかわる触媒化学シンポジウム, 2G09, 2025年6月14日（東北大学　片平さくらホール）"
+    ],
+    [
+      "山中一輝, 李炎釗, 渡邊健太, 清水啓佑, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“RFマグネトロンスパッタリング法によるLi2MnO3薄膜の合成と電気化学特性”,",
+      "電気化学会第92回大会，S8-3_3_14, 2025年3月20日（東京農工大学　小金井キャンパス,）"
+    ],
+    [
+      "李炎釗, 渡邊健太, 清水啓佑, 田村和久, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“放射光X線回折を用いた酸化物正極/硫化物電解質界面反応の解析”,",
+      "電気化学会第92回大会，S8-1_2_04, 2025年3月19日（東京農工大学　小金井キャンパス,）"
+    ],
+    [
+      "平山雅章, 伊藤耕太郎, 吉本 将隆, LI YANZHAO, 渡邊健太, 田村和久,",
+      "“放射光 X 線回折による全固体電池正極界面のその場観察”,",
+      "第3回革新的なエネルギー変換を可能とするマテリアル領域シンポジウム, 2024年12月24日（東京大学）"
+    ],
+    [
+      "渡邊健太, 吉本将隆, 田村和久,鈴木耕太, 菅野了次, 平山雅章,",
+      "“光電気化学的な固体イオニクス現象”,",
+      "50回固体イオニクス討論会, 1C-7, 2024年12月9日（大阪千里ライフサイエンスセンター,）"
+    ],
+    [
+      "渡邊健太, 中山秀章, キムハンスル, 松井直喜, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“機械特性の異なるLGPS型固体電解質を用いた複合体正極の充放電特性”,",
+      "第65回電池討論会， 1G20, 2024年11月20日（国立京都国際会館,）"
+    ],
+    [
+      "Yuqi Wang, 大嶋智, 渡邊健太, 松井直喜, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“全固体電池における未修飾LiCoO2/Li10GeP2S12-xOx正極複合体界面制御”,",
+      "第14回CSJ化学フェスタ, P7-014, 2024年10月24日（タワーホール船堀）"
+    ],
+    [
+      "李炎釗, 渡邊健太, 清水啓祐, 田村和久, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“薄膜電池を用いた酸化物正極/硫化物固体電解質モデル界面の電気化学特性”,",
+      "第14回CSJ化学フェスタ, P5-110, 2024年10月23日（タワーホール船堀）"
+    ],
+    [
+      "村上駆映, 渡邊健太, 野元邦治, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“小粒径LiCoO2-Li10GeP2S12正極複合体の作製と電気化学特性”,",
+      "第14回CSJ化学フェスタ, P6-109, 2024年10月23日（タワーホール船堀）"
+    ],
+    [
+      "宍戸雅紀, 高橋聡, 渡邊健太, 鈴木耕太, 菅野 了次, 平山 雅章, 中村 滉太郎, 阿部 智大, 花輪 洋宇, 安部 浩史,",
+      "“全固体電池における黒鉛-Li10P3S12Br負極複合体の電気化学特性”,",
+      "第14回CSJ化学フェスタ, P5-116, 2024年10月23日（タワーホール船堀）"
+    ],
+    [
+      "渡邊健太, 吉本将隆, 田村和久, 堀澤侑平, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“全固体系における光電気化学的酸化”,",
+      "第134回触媒討論会, 3C13, 2024年9月20日（名古屋大学　東山キャンパス）"
+    ],
+    [
+      "Wang Yuqi, 大嶋智, 渡邊健太, 松井直喜, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“全固体電池正極に用いる未修飾LiCoO2/Li10GeP2S12-xOx複合体の界面制御”,",
+      "金属学会2024年秋期（175回）講演大会, S8.7, 2024年9月18日（大阪大学豊中キャンパス）"
+    ],
+    [
+      "渡邊健太, 吉本将隆, 田村和久, 堀澤侑平, 鈴木耕太, 菅野了次, 平山雅章,",
+      "“全固体系における Li+脱離を伴う光電気化学的酸化”,",
+      "2024年光化学討論会, 1A13, 2024年9月3日（九州大学 伊都キャンパス）"
+    ],
+    [
+      "村上駆映, 渡邊健太, 野元邦治, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“粒径の異なるLiCoO2を用いたLiCoO2-Li10GeP2S12正極複合体の電気化学特性”",
+      "粉体粉末冶金協会2024年度春季大会，2024年5月22日（東京工業大学 すずかけ台キャンパス）"
+    ],
+    [
+      "宍戸雅紀, 高橋聡, 渡邊健太, 鈴木耕太, 菅野了次, 平山雅章, 中村滉太郎, 阿部智大, 花輪洋宇, 安部浩史（口頭）",
+      "“全固体電池用graphite-Li10P3S12Br複合体負極の電気化学特性”",
+      "粉体粉末冶金協会2024年度春季大会，2024年5月22日（東京工業大学 すずかけ台キャンパス）"
+    ],
+    [
+      "李炎釗, 渡邊健太, 清水啓佑, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“薄膜電池を用いた酸化物正極/硫化物固体電解質モデル界面の電気化学特性”",
+      "粉体粉末冶金協会2024年度春季大会，2024年5月22日（東京工業大学 すずかけ台キャンパス）"
+    ],
+    [
+      "Wang Yuqi, 大嶋智, 渡邊健太, 松井直喜, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“充放電における未修飾LiCoO2/Li10GeP2S12–xOx正極複合体界面の活性化過程”",
+      "粉体粉末冶金協会2024年度春季大会，2024年5月22日（東京工業大学 すずかけ台キャンパス）"
+    ],
+    [
+      "奥平輝, 薮崎拓海, 渡邊健太, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“Al2O3を複合化したLi10GeP2S12-xOx固体電解質の大気安定性”",
+      "粉体粉末冶金協会2024年度春季大会，2024年5月22日（東京工業大学 すずかけ台キャンパス）"
+    ],
+    [
+      "中山威弥, 鈴木耕太, 松井直喜, 渡邊健太, 世古敦人, 田中功, 菅野了次, 平山雅章（口頭）",
+      "“推薦システムが提案した未知組成とその期待値の大きさに基づく全固体電池材料の探索”",
+      "電気化学会第91回大会，2024年3月15日（名古屋大学 東山キャンパス）"
+    ],
+    [
+      "吉本将隆, 渡邊健太, 堀澤侑平, 田村和久, 清水啓佑, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“電極/固体電解質界面における光電気化学反応”",
+      "電気化学会第91回大会，2024年3月14日（名古屋大学 東山キャンパス）"
+    ],
+    [
+      "渡邊健太, 高橋聡, 松井直喜, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“金属負極/固体電解質界面のin-situ修飾による安定化”",
+      "電気化学会第91回大会，2024年3月14日（名古屋大学 東山キャンパス）"
+    ],
+    [
+      "高橋聡, 渡邊健太, 松井直喜, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“固体電解質/金属負極界面の界面制御によるサイクル安定性向上”",
+      "第62回セラミックス基礎科学討論会，2024年1月8日（上智大学 四谷キャンパス）"
+    ],
+    [
+      "K. Watanabe, T. Noda, H. S. Kim, N. Matsui, K. Suzuki, R. Kanno, M. Hirayama (Oral)",
+      "“Direct tracking reaction distribution in a composite cathode of an all-solid-state battery using operando SEM-EDX”",
+      "第62回セラミックス基礎科学討論会，2024年1月7日（上智大学 四谷キャンパス）"
+    ],
+    [
+      "河合爽也人，渡邊健太，清水啓佑，吉本将隆，鈴木耕太，菅野了次，平山雅章",
+      "“LiNi0.5Mn1.5O4正極を用いた全固体薄膜電池の光照射下における充放電特性”",
+      "日本金属学会2023年秋季講演大会，2023年9月21日（富山大学 五福キャンパス）"
+    ],
+    [
+      "Jun Chisu，淺野翔，鈴木耕太，渡邊健太，菅野了次，平山雅章（口頭）",
+      "“アークプラズマ堆積法で作製したMg-Si合金負極の充放電特性”",
+      "日本金属学会2023年秋季講演大会，2023年9月21日（富山大学 五福キャンパス）"
+    ],
+    [
+      "キムハンスル, 平山雅章, 渡邊健太, 松井直喜, 鈴木耕太, 菅野了次（口頭）",
+      "“Li10.35Ge1.35P1.65S12固体電解質粒度制御によるLi-In対極の可逆性向上”",
+      "粉体粉末冶金協会2023年度春季大会，2023年6月8日（早稲田大学国際会議場）"
+    ],
+    [
+      "オウウキ, 大嶋智, 渡邊健太, 松井直喜, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“未修飾LiCoO2/LGPS型電解質界面の充放電活性と複合体作製条件の影響”",
+      "粉体粉末冶金協会2023年度春季大会，2023年6月8日（早稲田大学国際会議場）"
+    ],
+    [
+      "野田琢磨, KIM Hanseul, 渡邊健太, 松井直喜, 鈴木耕太, 菅野了次, 平山雅章（口頭）",
+      "“In-situ SEM-EDXによる全固体ナトリウム電池の反応分布解析”",
+      "電気化学会第90回大会，2023年3月27日（東北工業大学 八木山キャンパス）"
+    ],
+    [
+      "渡邊健太，三石雄悟，佐山和弘（ポスター）",
+      "“600 nmまで応答するCs,Rh共ドープWO3酸素生成光触媒の開発”",
+      "第130回触媒討論会，2022年9月26日（オンライン開催）"
+    ],
+    [
+      "渡邊健太，三石雄悟，佐山和弘（ポスター）",
+      "“Cs,Rh共ドーピングによるWO3酸素生成光触媒の長波長応答化”",
+      "日本化学会第102春季年会，2022年3月23日（オンライン開催）"
+    ],
+    [
+      "D. Fan, S. Nozawa, K. Watanabe, A. Kudo（ポスター） \n“Transient-excited States of Visible-light-responsive Photocatalyst CuLi1/3Ti2/3O2 Investigated by Picosecond Time-resolved XAFS”， \n2021年光化学討論会，2021年9月16日（オンライン開催）"
+    ],
+    [
+      "渡邊健太，山口友一，工藤昭彦（口頭）\n“AgTaO3-Na0.5Bi0.5TiO3固溶体光触媒を用いたソーラー水分解”\n「革新的光-物質変換」第一回若手交流オンラインセミナー, 2020年12月12日（オンライン開催）"
+    ],
+    [
+      "内田悠生，渡邊健太，山口友一，工藤昭彦（ポスター） \n\"錯体重合法で調製されたSrTiO3:Ir光触媒を用いた可視光および疑似太陽光照射下におけるアンモニア水溶液の分解\" \n第39回光がかかわる触媒化学シンポジウム，2020年11月27日（オンライン開催）"
+    ],
+    [
+      "海谷恭平，渡邊健太，吉野隼矢，山口友一，工藤昭彦（口頭） \n\"フラックス処理による長波長応答性SrTiO3:Ir,Sbの可視光水分解の高活性化\" \n第39回光がかかわる触媒化学シンポジウム，2020年11月27日（オンライン開催）"
+    ],
+    [
+      "海谷恭平，渡邊健太，吉野隼矢，山口友一，工藤昭彦（ポスター） \n\"フラックス処理を施した長波長の光を利用できるSrTiO3:Ir,Sbを用いた可視光照射下における水の完全分解\" \n第10回CSJ化学フェスタ2020，2020年10月20日（オンライン開催）"
+    ],
+    [
+      "海谷恭平，渡邊健太，吉野隼矢，山口友一，工藤昭彦（ポスター） \n“フラックス処理により高性能化された長波長の光に応答するSrTiO3:Ir,Sbを用いた可視光水分解”",
+      "第126回触媒討論会, 2020年9月17日（オンライン開催）"
+    ],
+    [
+      "渡邊健太，山口友一，工藤昭彦（ポスター） \n“フラックス法で合成された価電子帯制御型金属酸化物光触媒であるNa0.5Bi0.5TiO3を用いた水分解”",
+      "第126回触媒討論会, 2020年9月17日（オンライン開催）"
+    ],
+    [
+      "C. To, K. Watanabe, Y. Yamaguchi, A. Kudo (Poster)\n“Solar water splitting over RhCrOx-loaded Na0.5Pr0.5TiO3 of a visible-light-driven metal oxide photocatalyst”",
+      "2020年Web光化学討論会，2020年9月9日（オンライン開催）"
+    ],
+    [
+      "渡邊健太，山口友一，工藤昭彦（口頭） \n“Ag(I)とBi(III)の相乗効果によって価電子帯上端が引き上げられたAgTaO3-Na0.5Bi0.5TiO3固溶体光触媒を用いた水分解”\n第125回触媒討論会, 2020年3月27日（工学院大学 新宿キャンパス）"
+    ],
+    [
+      "篠田樹，村上直也，渡邊健太，山口友一，工藤昭彦（口頭）",
+      "“ボールミル処理した酸化チタン(IV)光触媒粉末における欠陥生成の光音響分光解析”",
+      "日本化学会第100春季年会, 2020年3月24日（東京理科大学 野田キャンパス）"
+    ],
+    [
+      "渡邊健太，山口友一，工藤昭彦（口頭） \n“AgTaO3-Na0.5Bi0.5TiO3固溶体光触媒による水分解”\n第124回触媒討論会, 2019年9月20日（長崎大学 文教キャンパス）"
+    ],
+    [
+      "篠田樹，村上直也，渡邊健太，工藤昭彦（ポスター）",
+      "“光音響分光法による遷移金属ドープSrTiO3光触媒の欠陥準位と電子挙動の解析”",
+      "第124回触媒討論会, 2019年9月19日（長崎大学 文教キャンパス）"
+    ],
+    [
+      "渡邊健太（口頭，優秀口頭発表賞第1位）",
+      "“価電子帯制御型光触媒であるAgTaO3を用いた高効率な一段階励起型ソーラー水分解”",
+      "触媒学会若手会「第40回夏の研修会」，2019年8月1日（休暇村伊良湖，愛知）"
+    ],
+    [
+      "篠田樹，村上直也，渡邊健太，工藤昭彦（ポスター）",
+      "“ロジウムドープチタン酸ストロンチウム光触媒の欠陥準位の光音響解析”",
+      "第38回光がかかわる触媒化学シンポジウム，2019年6月21日（トヨタ産業技術記念館）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（ポスター，ポスター賞受賞）\n“価電子帯制御型光触媒であるAgTaO3を用いた高効率ソーラー水分解”\n第38回光がかかわる触媒化学シンポジウム，2019年6月21日（トヨタ産業技術記念館）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（ポスター）\n“価電子帯制御型光触媒であるAgTaO3を用いた高効率水分解”\n日本化学会第99春季年会, 2019年3月16日（甲南大学 岡本キャンパス）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（口頭） \n“AgTaO3-PbTiO3固溶体光触媒による水分解”\n第122回触媒討論会，2018年9月26日 (北海道教育大学函館校)"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（ポスター） \n“新規可視光応答性酸化物固溶体光触媒を用いた可視光水分解による水素製造”\n第7回 JACI/GSCシンポジウム，2018年6月15日（ANAクラウンプラザホテル神戸）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（口頭） \n“AgNbO3-PbTiO3固溶体酸化物光触媒による可視光照射下における酸素生成”\n日本化学会第98春季年会，2018年3月20日，（日大船橋キャンパス）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（口頭） \n“ワイドバンドギャップ酸化物への溶融塩処理を用いたAg(I), Cu(I)置換による可視光応答性光触媒の開発”\n電気化学会第85回大会，2018年3月9日（東京理科大学　葛飾）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（ポスター）",
+      "“層状ペロブスカイト酸化物に対するAg(I)およびCu(I)系溶融塩処理による新規可視光応答性光触媒の開発”\n新学術領域研究第一回シンポジウム, 2018年1月16日（東工大大岡山）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（口頭）",
+      "“層状ペロブスカイト酸化物に対するAg(I), Cu(I), Sn(II)系溶融塩処理による新規可視光応答性光触媒の開発”",
+      "第120回触媒討論会，2017年9月12-14日（愛媛大学城北キャンパス）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（ポスター，GSCポスター賞受賞）",
+      "“Cu(I)を構成元素に含む層状酸化物光触媒による可視光水素製造”",
+      "第6回JACI/GSCシンポジウム，2017年7月3，4日（東京国際フォーラム）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（口頭） \n“溶融塩処理を用いたワイドバンドギャップ酸化物へのAg(I), Cu(I)置換による可視光応答性光触媒の開発”\n第36回光がかかわる触媒化学シンポジウム，2017年6月30日（近畿大学東大阪キャンパス）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（口頭） \n“トンネル構造を有する金属酸化物に対する溶融塩処理によるAg(I)またはCu(I)を置換した新規酸化物光触媒の開発”\n日本化学会第97春季年会，2017年3月17日（慶應義塾大学日吉キャンパス）"
+    ],
+    [
+      "中川馨太，渡邊健太，高山大鑑，岩瀬顕秀，工藤昭彦（口頭） \n“種々の元素を置換したBa2In2O5の光触媒特性”\n日本化学会第97春季年会，2017年3月17日（慶應義塾大学日吉キャンパス）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（ポスター） \n“水素または酸素生成に活性を示すALi1/3Ti2/3O2 (A = Ag, Cu)可視光応答性光触媒の金属イオンドープによる高性能化”\n第6回CSJ化学フェスタ，2016年11月16日（タワーホール船堀）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（口頭）",
+      "“Cu(I)を置換した層状金属酸化物光触媒による可視光照射下での水素製造”",
+      "第118回触媒討論会，2016年9月21日（岩手大学）"
+    ],
+    [
+      "渡邊健太，岩瀬顕秀，工藤昭彦（ポスター） \n“ALi1/3Ti2/3O2 (A = Ag, Cu)の光触媒活性および半導体特性における金属イオンドーピング効果”\n第35回光がかかわる触媒化学シンポジウム，2016年6月10日（東京工業大学）"
+    ],
+    [
+      "渡邊健太，浅子典弘，岩瀬顕秀，工藤昭彦（ポスター） \n“独自のバンドエンジニアリングで開発された520 nmまで応答するAgLi1/3Ti2/3O2:Rh,Sb光触媒”\n“Development of AgLi1/3Ti2/3O2:Rh,Sb Photocatalysts with Visible Light Response up to 520 nm on the Basis of an Original Band Engineering Strategy” \n第5回JACI/GSCシンポジウム，2016年6月3日（ANAクラウンプラザホテル神戸）"
+    ],
+    [
+      "渡邊健太，浅子典弘，岩瀬顕秀，工藤昭彦（口頭） \n“種々の価数を持つ金属イオンドーピングによる可視光応答性ALi1/3Ti2/3O2 (A = Ag, Cu)光触媒の高活性化”\n日本化学会第96春季年会，2016年3月24日（同志社大学　京田辺キャンパス）"
+    ],
+    [
+      "渡邊健太，浅子典弘，岩瀬顕秀，工藤昭彦（ポスター） \n“AgLi1/3Ti2/3O2:Rh,Sb光触媒のバンド構造および光触媒活性における不純物準位形成と価電子帯制御の相乗効果”\n第117回触媒討論会，2016年3月21日（大阪府立大学　中百舌鳥キャンパス）"
+    ],
+    [
+      "渡邊健太，浅子典弘，岩品克哉，岩瀬顕秀，工藤昭彦（ポスター）",
+      "“遷移金属をドーピングしたALi1/3Ti2/3O2 (A=Ag and Cu) の可視光照射下における光触媒特性”",
+      "“Photocatalytic Properties of ALi1/3Ti2/3O2 (A=Ag and Cu) Doped with Transition Metal Ions under Visible Light Irradiation”",
+      "2015年光化学討論会，2015年9月9日（大阪市立大学　杉本キャンパス）"
+    ]
+  ]
+}
