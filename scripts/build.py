@@ -14,7 +14,7 @@ def esc(value):
 
 def emphasize_authors(value):
     value = esc(value)
-    return re.sub(r"(K\\. Watanabe|Kenta Watanabe|渡邊健太)", r"<strong>\\1</strong>", value)
+    return re.sub(r"(K\. Watanabe|Kenta Watanabe|渡邊健太)", r"<strong>\1</strong>", value)
 
 def paper_anchor(paper, index):
     matches = (
@@ -41,7 +41,7 @@ def paper_markup(paper, index):
 def records(items):
     list_items = []
     for item in items:
-        lines = "".join("<p>" + emphasize_authors(line) + "</p>" for line in item)
+        lines = "".join("<p>" + emphasize_authors(re.sub(r"[ \t]+\r?\n", "\n", line).strip()) + "</p>" for line in item)
         list_items.append("<li>" + lines + "</li>")
     return '<ol class="record-list">' + "".join(list_items) + "</ol>"
 
@@ -51,6 +51,7 @@ def document(filename, title, description, body):
         f'<a href="{path}"' + (" aria-current=\"page\"" if path == filename else "") + f">{label}</a>"
         for path, label in pages
     )
+    language_link = "english.html"
     return f'''<!doctype html>
 <html lang="ja">
 <head>
@@ -65,7 +66,7 @@ def document(filename, title, description, body):
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="index.html" aria-label="渡邊健太 ホーム"><span class="brand-mark" aria-hidden="true">kw.</span><span class="brand-text">KENTA WATANABE<small>渡邊 健太 / 個人研究者サイト</small></span></a>
-    <nav class="main-nav" aria-label="メインナビゲーション">{navigation}</nav>
+    <nav class="main-nav" aria-label="メインナビゲーション">{navigation}<a class="language-link" href="{language_link}">EN</a></nav>
   </div></header>
   <main id="main">{body}</main>
   <section class="contact-band" aria-label="研究者情報"><div class="container contact-inner"><div><p class="eyebrow">CONNECT</p><p>研究者情報・外部プロフィール</p></div><div class="footer-links"><a href="https://researchmap.jp/waken-photo">researchmap ↗</a><a href="https://orcid.org/0000-0003-0827-7381">ORCID ↗</a></div></div></section>

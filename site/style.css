@@ -7,3 +7,5 @@
 @media(max-width:380px){.container{width:calc(100% - 32px)}.research-note{display:block}.note-title{font-size:3rem}.focus-list{margin-top:20px}.identity strong span{display:block;margin-left:0}.actions{gap:20px}.button{gap:20px;padding:12px 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.site-header,.subnav,.year-nav,.contact-band,.site-footer,.actions,.skip-link{display:none}.container{width:100%;max-width:none}.hero,.profile-layout,.content-layout{display:block}.research-note{display:none}.page-intro,.section{padding:20px 0}.paper,.record-list li,.timeline>div{break-inside:avoid}body{font-size:11pt;color:#000}a{color:#000;text-decoration:none}.authors,.muted,.citation{color:#333}.profile-card{background:transparent}.research-grid{display:block}.disclosure:not([open]){display:none}}
+
+.main-nav .language-link{font-family:Arial,sans-serif;font-size:.76rem;letter-spacing:.08em;padding-inline:12px;border-left:1px solid var(--line);border-bottom:0}.main-nav .language-link:hover{color:var(--accent)}
