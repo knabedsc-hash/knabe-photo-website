@@ -78,7 +78,12 @@ def write(filename, title, description, body):
 
 papers = data["papers"]
 by_prefix = lambda prefix: next(p for p in papers if p["title"].startswith(prefix))
-featured = [by_prefix("3-Dimensional"), by_prefix("Self-Closing"), by_prefix("Stable Photoelectrochemical")]
+featured = [
+    by_prefix("3-Dimensional"),
+    by_prefix("Self-Closing"),
+    by_prefix("Stable Photoelectrochemical"),
+    by_prefix("Solar water splitting over Rh"),
+]
 home_template = (ROOT / "templates" / "home.html").read_text(encoding="utf-8")
 featured_markup = "".join(paper_markup(p, papers.index(p)) for p in featured)
 home = home_template.replace("{{selected_papers}}", featured_markup)
