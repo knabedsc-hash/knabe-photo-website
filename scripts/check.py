@@ -1,13 +1,21 @@
-"""Small static-site validation for the generated public output."""
+"""Static-site validation for the generated public output."""
 from pathlib import Path
 
 site = Path(__file__).resolve().parents[1] / "site"
-pages = ["index.html", "publications.html", "activities.html", "profile.html", "404.html"]
-for page in pages:
+japanese_pages = ["index.html", "publications.html", "activities.html", "profile.html", "links.html", "404.html"]
+english_pages = ["index.html", "publications.html", "activities.html", "profile.html", "links.html", "404.html"]
+for page in japanese_pages:
     content = (site / page).read_text(encoding="utf-8")
     assert '<main id="main">' in content, page
     assert "渡邊 健太" in content, page
     assert 'href="style.css"' in content, page
+for page in english_pages:
+    content = (site / "en" / page).read_text(encoding="utf-8")
+    assert '<main id="main">' in content, page
+    assert "Kenta Watanabe" in content, page
+    assert 'href="../style.css"' in content, page
 assert (site / "style.css").stat().st_size > 1000
-assert "3-Dimensional Conductive Pathways" in (site / "publications.html").read_text(encoding="utf-8")
+assert "Relationship Between Contact Resistance" in (site / "publications.html").read_text(encoding="utf-8")
+assert "Related Websites" in (site / "en" / "links.html").read_text(encoding="utf-8")
+assert "Hirayama Laboratory" in (site / "en" / "links.html").read_text(encoding="utf-8")
 print("Static site validation passed.")
