@@ -1,6 +1,14 @@
 {
-  "updated": "2026-09-10",
+  "updated": "2026-09-14",
   "papers": [
+    {
+      "authors": "K. Watanabe,* Y. Yamada, M. Shishido, Y. Wang, K. Murakami, R. Kanno, M. Hirayama",
+      "title": "Relationship Between Contact Resistance in e–-Conductive Pathways and Mechanical Properties of Active Materials in Microstructurally-Controlled Composite Electrodes for Sulfide All-Solid-State Batteries",
+      "citation": "Batteries & Supercaps 2026, accepted.",
+      "year": "2026",
+      "note": "",
+      "url": ""
+    },
     {
       "authors": "B. Y. Kang, K. Murakami, K. Watanabe,* Y. Yamada, K. Aso, R. Kanno, M. Hirayama,*",
       "title": "3-Dimensional Conductive Pathways in Microstructure-Controlled Composite Cathodes for All-Solid-State Batteries",
@@ -399,6 +407,11 @@
   ],
   "invited": [
     [
+      "平山雅章，渡邊健太 （招待講演），",
+      "“全固体電池研究におけるマルチスケール構造解析”，",
+      "電池ソリューションセミナー, 2026年2月10日（オンライン）"
+    ],
+    [
       "K. Watanabe (Invited)",
       "\"Photoelectrochemical Reactions in All-Solid-State Systems toward Solar Energy Conversion and Storage\"",
       "Materials Research Meeting (MRM) 2025, Dec. 12. 2025 (Pacifico Yokohama)"
@@ -416,6 +429,31 @@
     ]
   ],
   "international": [
+    [
+      "M. Hirayama, H. Zhou, K. Watanabe, R. Kanno, N. L. Yamada,",
+      "\"Probing CEI Nanostructure and Intercalation Behavior at Li-Ion Battery Cathode Interfaces by In Situ Neutron Reflectometry\",",
+      "2026 MRS Spring Meeting & Exhibit, CH06.04.03, Apr. 29. 2026. (Hawaii)"
+    ],
+    [
+      "B.-Y. Kang, K. Watanabe, R. Kanno, M. Hirayama,",
+      "\"Designing Microstructures of Thick Composite Cathodes with Low Tortuosity and Enhanced Interfacial Contacts for All-Solid-State Batteries with High Rate-Performance\",",
+      "Materials Research Meeting (MRM) 2025, D3-O301-02, Dec. 11. 2025. (Pacifico Yokohama, Japan)"
+    ],
+    [
+      "Y. Wang, S. Oshima, K. Watanabe, N. Matsui, K. Suzuki, R. Kanno, M. Hirayama,",
+      "\"Analysis of Charge-Discharge Activation at the Interface of Unmodified -LiCoO2/Li10GeP2S12-xOx Cathode Composite for All-Solid-State Batteries\",",
+      "Materials Research Meeting (MRM) 2025, D3-P203-09, Dec. 10. 2025. (Pacifico Yokohama, Japan)"
+    ],
+    [
+      "T. Naka, G. Kobayashi, K. Watanabe, K. Shimizu, R. Kanno, M. Hirayama,",
+      "\"Synthesis of BaZr0.5In0.5O2.75 thin-films and interfacial reactions under hydrogen ambient conditions\",",
+      "Materials Research Meeting (MRM) 2025, D3-P203-29, Dec. 10. 2025. (Pacifico Yokohama, Japan)"
+    ],
+    [
+      "Y. Dong, H. Suzuki, K. Watanabe, R. Kanno, M. Hirayama,",
+      "\"Enhancing Electronic Conductivity and Electrochemical Performance of Lithium-Excess Layered Rocksalt Cathodes for All-Solid-State Batteries\",",
+      "Materials Research Meeting (MRM) 2025, D3-P203-30, Dec. 10. 2025. (Pacifico Yokohama, Japan)"
+    ],
     [
       "P. Jiang, H. Zhou, S. Song, K. Suzuki, K. Watanabe, Y. Yamaguchi, N. Matsui, S. Hori, R. Kanno, M. Hirayama,",
       "\"A Liquid-Phase-Synthesized Cathode Composite with a Three-Dimensional Ion/Electron-Conducting Structure for All-Solid-State Lithium–Sulfur Batteries\",",
@@ -527,6 +565,55 @@
     ]
   ],
   "domestic": [
+    [
+      "渡邊健太，河合爽也人，清水啓佑，鈴木耕太，菅野了次，平山雅章，",
+      "“光電子分光を用いたLi/非晶質Li3PO4界面におけるLi+/Li標準電極電位の同定”，",
+      "電気化学会第93回大会，S8-3_1_14, 2026年3月17日（東京理科大学野田キャンパス,）"
+    ],
+    [
+      "山中一輝，李炎釗，渡邊健太，清水啓佑，鈴木耕太，菅野了次，平山雅章，",
+      "“RFマグネトロンスパッタリング法によるLi2 MnO3薄膜の初期構造・組成の制御と電気化学特性”，",
+      "第64回セラミックス基礎科学討論会, 1C13, 2026年1月10日（豊橋技術科学大学）"
+    ],
+    [
+      "渡邊健太，キムハンスル，松井直喜，鈴木耕太，菅野了次，平山雅章，",
+      "“SEM-EDXによる微細構造制御した400μm厚複合体正極内に生じた空隙の自己閉鎖現象のin situ観察”，",
+      "第51回固体イオニクス討論会, 1A-05, 2025年11月25日（タワーホール船堀）"
+    ],
+    [
+      "Li Yanzhao, 山中一輝，渡邊健太，清水啓祐，田村和久，鈴木耕太，菅野了次，平山雅章，",
+      "“放射光X線回折を用いた硫化物全固体電池の高電位劣化機構解析”，",
+      "第51回固体イオニクス討論会, 1A-03, 2025年11月25日（タワーホール船堀）"
+    ],
+    [
+      "渡邊健太，キムハンスル，松井直喜，鈴木耕太，菅野了次，平山雅章，",
+      "“In situ SEM-EDXによる微細構造制御した400 μm厚複合体正極内に生じた空隙の自己閉鎖現象の観察”，第66回電池討論会，1A17, 2025年11月18日（ウインクあいち）"
+    ],
+    [
+      "董雨冰，渡邊健太，菅野了次，平山雅章，",
+      "“微量元素置換・硫化物複合化によるリチウム過剰層状型正極の性能指針探索”，",
+      "第15回CSJ化学フェスタ2025, P4-020, 2025年10月23日（タワーホール船堀）"
+    ],
+    [
+      "谷口広至，淺野翔，渡邊健太，清水啓佑，鈴木耕太，菅野了次，平山雅章，",
+      "“Liイオン電池用プレリチウム化アモルファスSi薄膜の合成と充放電特性評価”，",
+      "第15回CSJ化学フェスタ2025, P2-101, 2025年10月22日（タワーホール船堀）"
+    ],
+    [
+      "山中一輝，李炎釗, 渡邊健太，清水啓佑，鈴木耕太，菅野了次, 平山雅章，",
+      "“初期組成の異なるLi-Mn-O系正極膜の合成と構造，電気化学特性”，",
+      "第15回CSJ化学フェスタ2025, P1-114, 2025年10月22日（タワーホール船堀）"
+    ],
+    [
+      "Y.S. Chen, Y. Wang, K. Watanabe, R. Kanno, M. Hirayama,",
+      "“Oxygen and Iodine Co-Substitution in Li10GeP2S12-Based Solid Electrolytes for Improving Electrochemical Performance”,",
+      "第15回CSJ化学フェスタ2025, P1-108, 2025年10月22日（タワーホール船堀）"
+    ],
+    [
+      "Jehong Ahn, Byungyeon Kang, 広瀬隆，渡邊健太，平山雅章，菅野了次,",
+      "“アニオン微量置換LGPS型固体電解質の合成とリチウムイオン導電特性評価”,",
+      "第15回CSJ化学フェスタ2025, P2-107, 2025年10月22日（タワーホール船堀）"
+    ],
     [
       "李炎釗, 山中一輝, 渡邊健太, 清水啓祐, 田村和久, 鈴木耕太, 菅野了次, 平山雅章,",
       "“放射光X線回折を用いた硫化物全固体電池の高電位劣化機構解析”,",
@@ -812,5 +899,35 @@
       "“Photocatalytic Properties of ALi1/3Ti2/3O2 (A=Ag and Cu) Doped with Transition Metal Ions under Visible Light Irradiation”",
       "2015年光化学討論会，2015年9月9日（大阪市立大学　杉本キャンパス）"
     ]
+  ],
+  "teaching": [
+    {
+      "term": "2023, 1Q",
+      "code": "CAP.F301",
+      "name": "応用化学実験第三",
+      "english": "Chemical Science and Engineering Laboratory III",
+      "affiliation": "東京工業大学 物質理工学院 応用化学系"
+    },
+    {
+      "term": "2024, 3,4Q",
+      "code": "CAP.F304",
+      "name": "応用化学実験第四",
+      "english": "Chemical Science and Engineering Laboratory IV",
+      "affiliation": "東京科学大学 物質理工学院 応用化学系"
+    },
+    {
+      "term": "2025, 3,4Q",
+      "code": "CAP.F304",
+      "name": "応用化学実験第四",
+      "english": "Chemical Science and Engineering Laboratory IV",
+      "affiliation": "東京科学大学 物質理工学院 応用化学系"
+    },
+    {
+      "term": "2026, 3,4Q",
+      "code": "CAP.F304",
+      "name": "応用化学実験第四",
+      "english": "Chemical Science and Engineering Laboratory IV",
+      "affiliation": "東京科学大学 物質理工学院 応用化学系"
+    }
   ]
 }

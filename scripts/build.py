@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "site"
 OUT.mkdir(exist_ok=True)
 data = json.loads((ROOT / "content" / "achievements.json").read_text(encoding="utf-8"))
+last_updated = data["updated"].replace("-", ".")
 
 def esc(value):
     return escape(str(value))
@@ -70,7 +71,7 @@ def document(filename, title, description, body):
   </div></header>
   <main id="main">{body}</main>
   <section class="contact-band" aria-label="研究者情報"><div class="container contact-inner"><div><p class="eyebrow">CONNECT</p><p>研究者情報・外部プロフィール</p></div><div class="footer-links"><a href="https://researchmap.jp/waken-photo">researchmap ↗</a><a href="https://orcid.org/0000-0003-0827-7381">ORCID ↗</a></div></div></section>
-  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Kenta Watanabe</span><span>掲載情報の確認日：2026.09.10</span><a href="#main">ページ上部へ ↑</a></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Kenta Watanabe</span><span>掲載情報の確認日：{last_updated}</span><a href="#main">ページ上部へ ↑</a></div></footer>
 </body></html>'''
 
 def write(filename, title, description, body):
@@ -79,6 +80,7 @@ def write(filename, title, description, body):
 papers = data["papers"]
 by_prefix = lambda prefix: next(p for p in papers if p["title"].startswith(prefix))
 featured = [
+    by_prefix("Relationship Between Contact Resistance"),
     by_prefix("3-Dimensional"),
     by_prefix("Self-Closing"),
     by_prefix("Stable Photoelectrochemical"),
@@ -113,7 +115,11 @@ grants = '<div class="grant-grid">' + "".join(f'<article class="grant"><span cla
 activities = f'''<section class="page-intro container"><p class="eyebrow">ACTIVITIES</p><h1>研究活動</h1><p>学会発表、受賞、研究助成。</p></section><div class="container"><nav class="subnav" aria-label="研究活動の種類"><a href="#talks">招待講演・学会発表</a><a href="#awards">受賞</a><a href="#funding">研究助成</a></nav><section class="group-section" id="talks"><p class="eyebrow">TALKS &amp; PRESENTATIONS</p><h2>招待講演</h2>{records(data["invited"])}<details class="disclosure"><summary>国際学会発表（{len(data["international"])}件）</summary>{records(data["international"])}</details><details class="disclosure"><summary>国内学会発表（{len(data["domestic"])}件）</summary>{records(data["domestic"])}</details></section><section class="group-section" id="awards"><p class="eyebrow">AWARDS</p><h2>受賞</h2>{records(data["awards"])}</section><section class="group-section" id="funding"><p class="eyebrow">RESEARCH FUNDING</p><h2>研究助成</h2>{grants}</section></div>'''
 write("activities.html", "研究活動", "渡邊健太の招待講演、国際・国内学会発表、受賞、競争的研究資金。", activities)
 
-profile = (ROOT / "templates" / "profile.html").read_text(encoding="utf-8")
+teaching_markup = "".join(
+    f'''<div><dt>{esc(course["term"].replace(",", "年度", 1).replace(",", "・"))}</dt><dd><h3>{esc(course["name"])}（{esc(course["code"])}）</h3><p lang="en">{esc(course["english"])}</p><p class="muted">{esc(course["affiliation"])}</p></dd></div>'''
+    for course in data["teaching"]
+)
+profile = (ROOT / "templates" / "profile.html").read_text(encoding="utf-8").replace("{{teaching}}", teaching_markup)
 write("profile.html", "プロフィール", "渡邊健太のプロフィール。東京科学大学助教、博士（理学）。職歴、学歴、委員歴、所属学会、担当授業。", profile)
 write("404.html", "ページが見つかりません", "お探しのページが見つかりませんでした。", '<section class="page-intro container"><p class="eyebrow">404</p><h1>ページが見つかりません</h1><p>上のメニューから、目的のページへお進みください。</p></section>')
 (OUT / ".nojekyll").touch()
