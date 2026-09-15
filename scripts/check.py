@@ -21,5 +21,5 @@ assert "Hirayama Laboratory" in (site / "en" / "links.html").read_text(encoding=
 assert "水分解" in (site / "gallery.html").read_text(encoding="utf-8")
 assert "Research Video" in (site / "en" / "gallery.html").read_text(encoding="utf-8")
 assert len(list((site / "media" / "covers").glob("*.webp"))) == 13
-assert (site / "media" / "videos" / "rhcrox-agtao3.mov").is_file()
+assert (site / "media" / "videos" / "rhcrox-agtao3.mp4").is_file()
 print("Static site validation passed.")
