@@ -10,3 +10,8 @@ node_modules/
 .env.*
 !.env.example
 *.log
+
+CoverPictures/
+RhCrOx-AgTaO3.MOV
+tmp-cover-contact-sheet.jpg
+!site/media/videos/rhcrox-agtao3.mov

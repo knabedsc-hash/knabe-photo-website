@@ -2,8 +2,8 @@
 from pathlib import Path
 
 site = Path(__file__).resolve().parents[1] / "site"
-japanese_pages = ["index.html", "publications.html", "activities.html", "profile.html", "links.html", "404.html"]
-english_pages = ["index.html", "publications.html", "activities.html", "profile.html", "links.html", "404.html"]
+japanese_pages = ["index.html", "publications.html", "activities.html", "profile.html", "gallery.html", "links.html", "404.html"]
+english_pages = ["index.html", "publications.html", "activities.html", "profile.html", "gallery.html", "links.html", "404.html"]
 for page in japanese_pages:
     content = (site / page).read_text(encoding="utf-8")
     assert '<main id="main">' in content, page
@@ -18,4 +18,8 @@ assert (site / "style.css").stat().st_size > 1000
 assert "Relationship Between Contact Resistance" in (site / "publications.html").read_text(encoding="utf-8")
 assert "Related Websites" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "Hirayama Laboratory" in (site / "en" / "links.html").read_text(encoding="utf-8")
+assert "水分解" in (site / "gallery.html").read_text(encoding="utf-8")
+assert "Research Video" in (site / "en" / "gallery.html").read_text(encoding="utf-8")
+assert len(list((site / "media" / "covers").glob("*.webp"))) == 13
+assert (site / "media" / "videos" / "rhcrox-agtao3.mov").is_file()
 print("Static site validation passed.")

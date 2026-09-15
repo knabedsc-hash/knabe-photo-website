@@ -56,7 +56,7 @@ def records(items):
 
 
 def japanese_document(filename, title, description, body):
-    pages = [("index.html", "研究"), ("publications.html", "論文・著書"), ("activities.html", "研究活動"), ("profile.html", "プロフィール"), ("links.html", "関連サイト")]
+    pages = [("index.html", "研究"), ("publications.html", "論文・著書"), ("activities.html", "研究活動"), ("profile.html", "プロフィール"), ("gallery.html", "ギャラリー"), ("links.html", "関連サイト")]
     navigation = "".join(
         f'<a href="{path}"' + (" aria-current=\"page\"" if path == filename else "") + f">{label}</a>"
         for path, label in pages
@@ -84,7 +84,7 @@ def japanese_document(filename, title, description, body):
 
 
 def english_document(filename, title, description, body):
-    pages = [("index.html", "Research"), ("publications.html", "Publications"), ("activities.html", "Activities"), ("profile.html", "Profile"), ("links.html", "Links")]
+    pages = [("index.html", "Research"), ("publications.html", "Publications"), ("activities.html", "Activities"), ("profile.html", "Profile"), ("gallery.html", "Gallery"), ("links.html", "Links")]
     navigation = "".join(
         f'<a href="{path}"' + (" aria-current=\"page\"" if path == filename else "") + f">{label}</a>"
         for path, label in pages
@@ -213,10 +213,43 @@ write_jp("links.html", "関連サイト", "渡邊健太の所属・研究に関�
 en_links = f'''<section class="page-intro container"><p class="eyebrow">RELATED WEBSITES</p><h1>Related Websites</h1><p>Laboratories and research centers connected with my appointments and research.</p></section><section class="container section links-section">{resource_cards("en")}</section>'''
 write_en("links.html", "Related Websites", "Laboratories and research centers connected with Kenta Watanabe’s appointments and research.", en_links)
 
+cover_images = [
+    ("2019ACSSustainChemEng", "2019", "ACS Sustainable Chemistry & Engineering", "Supplementary cover"),
+    ("2020ChemMater", "2020", "Chemistry of Materials", "Supplementary cover"),
+    ("2020ChemSci", "2020", "Chemical Science", "Outside front cover"),
+    ("2021ChemComm", "2021", "Chemical Communications", "Outside back cover"),
+    ("2023AdvEnergyMater", "2023", "Advanced Energy Materials", "Journal cover"),
+    ("2023BatteriesSupercaps", "2023", "Batteries & Supercaps", "Front cover"),
+    ("2024AdvMaterInterfaces", "2024", "Advanced Materials Interfaces", "Front cover"),
+    ("2024ChemSci", "2024", "Chemical Science", "Inside front cover"),
+    ("2024NanoLett", "2024", "Nano Letters", "Supplementary cover"),
+    ("2024SustainEnergyFuels", "2024", "Sustainable Energy & Fuels", "Inside front cover"),
+    ("2025ACSApplEnergyMater", "2025", "ACS Applied Energy Materials", "Supplementary cover"),
+    ("2025BatteriesSupercaps", "2025", "Batteries & Supercaps", "Front cover"),
+    ("2026BatteriesSupercaps", "2026", "Batteries & Supercaps", "Front cover"),
+]
+
+
+def gallery_cards(language):
+    prefix = "" if language == "jp" else "../"
+    cards = []
+    for stem, year, journal, cover_type in cover_images:
+        labels = {"Supplementary cover": "サプリメンタリーカバー", "Outside front cover": "表紙（Outside front cover）", "Outside back cover": "裏表紙（Outside back cover）", "Journal cover": "ジャーナルカバー", "Front cover": "表紙（Front cover）", "Inside front cover": "表紙（Inside front cover）"}
+        kind = labels[cover_type] if language == "jp" else cover_type
+        cards.append(f"""<article class="gallery-card"><div class="gallery-image-frame"><img src="{prefix}media/covers/{stem}.webp" alt="{esc(year + ' ' + journal + ' cover image')}" width="900" height="1200" loading="lazy"></div><div class="gallery-card-copy"><p class="eyebrow">{esc(year)} · {esc(kind.upper() if language == "en" else kind)}</p><h2>{esc(journal)}</h2></div></article>""")
+    return '<div class="gallery-grid">' + "".join(cards) + "</div>"
+
+
+jp_gallery = f"""<section class="page-intro container"><p class="eyebrow">GALLERY</p><h1>ギャラリー</h1><p>採択論文のカバーピクチャーと、研究に関する動画。</p></section><div class="container"><nav class="subnav" aria-label="ギャラリーの種類"><a href="#covers">カバーピクチャー</a><a href="#video">研究動画</a></nav><section class="gallery-section" id="covers"><div class="section-heading"><div><p class="eyebrow">JOURNAL COVERS</p><h2>カバーピクチャー</h2></div><p>縦横比を保ったまま、表示時の高さを統一しています。</p></div>{gallery_cards("jp")}</section><section class="gallery-section video-section" id="video"><div class="section-heading"><div><p class="eyebrow">RESEARCH VIDEO</p><h2>研究動画</h2></div></div><article class="video-gallery-card"><div class="video-gallery-copy"><p class="eyebrow">WATER SPLITTING</p><h3>Rh<sub>0.5</sub>Cr<sub>1.5</sub>O<sub>3</sub>/AgTaO<sub>3</sub>を用いた紫外光照射下での水分解</h3><p>紫外光照射下における光触媒水分解の様子。</p><a class="text-link" href="media/videos/rhcrox-agtao3.mov" download>動画をダウンロード <span aria-hidden="true">↓</span></a></div><video class="gallery-video" controls preload="metadata"><source src="media/videos/rhcrox-agtao3.mov" type="video/quicktime">お使いのブラウザは動画再生に対応していません。ダウンロードしてご覧ください。</video></article></section></div>"""
+write_jp("gallery.html", "ギャラリー", "渡邊健太の採択論文カバーピクチャーと研究動画。", jp_gallery)
+
+en_gallery = f"""<section class="page-intro container"><p class="eyebrow">GALLERY</p><h1>Gallery</h1><p>Journal cover images and research videos.</p></section><div class="container"><nav class="subnav" aria-label="Gallery categories"><a href="#covers">Journal covers</a><a href="#video">Research video</a></nav><section class="gallery-section" id="covers"><div class="section-heading"><div><p class="eyebrow">JOURNAL COVERS</p><h2>Cover Images</h2></div><p>Displayed at a consistent height while preserving their aspect ratios.</p></div>{gallery_cards("en")}</section><section class="gallery-section video-section" id="video"><div class="section-heading"><div><p class="eyebrow">RESEARCH VIDEO</p><h2>Research Video</h2></div></div><article class="video-gallery-card"><div class="video-gallery-copy"><p class="eyebrow">WATER SPLITTING</p><h3>Water splitting over Rh<sub>0.5</sub>Cr<sub>1.5</sub>O<sub>3</sub>/AgTaO<sub>3</sub> under ultraviolet irradiation</h3><p>Photocatalytic water splitting under ultraviolet irradiation.</p><a class="text-link" href="../media/videos/rhcrox-agtao3.mov" download>Download video <span aria-hidden="true">↓</span></a></div><video class="gallery-video" controls preload="metadata"><source src="../media/videos/rhcrox-agtao3.mov" type="video/quicktime">Your browser does not support video playback. Please download the file to view it.</video></article></section></div>"""
+write_en("gallery.html", "Gallery", "Journal cover images and a research video by Kenta Watanabe.", en_gallery)
+
 write_jp("404.html", "ページが見つかりません", "お探しのページが見つかりませんでした。", '<section class="page-intro container"><p class="eyebrow">404</p><h1>ページが見つかりません</h1><p>上のメニューから、目的のページへお進みください。</p></section>')
 write_en("404.html", "Page Not Found", "The requested page could not be found.", '<section class="page-intro container"><p class="eyebrow">404</p><h1>Page Not Found</h1><p>Please use the menu to find the page you need.</p></section>')
 
 (OUT / "english.html").write_text('''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="refresh" content="0; url=en/index.html"><link rel="canonical" href="en/index.html"><title>Kenta Watanabe | Research</title></head><body><p>The English site has moved to <a href="en/index.html">en/index.html</a>.</p></body></html>''', encoding="utf-8")
 (OUT / ".nojekyll").touch()
 (OUT / "favicon.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#102e3b"/><text x="8" y="44" fill="#92dbd1" font-family="Georgia,serif" font-size="38" letter-spacing="-4">kw.</text></svg>', encoding="utf-8")
-print(f"Built 5 Japanese and 6 English pages with {len(papers)} papers.")
+print(f"Built 6 Japanese and 7 English pages with {len(papers)} papers.")
