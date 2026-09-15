@@ -229,6 +229,8 @@ cover_images = [
     ("2026BatteriesSupercaps", "2026", "Batteries & Supercaps", "Front cover", "B. Y. Kang et al., Batteries & Supercaps 2026, 9, e70378.", "https://doi.org/10.1002/batt.70378", "© 2026 Wiley-VCH GmbH."),
 ]
 
+cover_images.sort(key=lambda cover: int(cover[1]), reverse=True)
+
 
 def gallery_cards(language):
     prefix = "" if language == "jp" else "../"
