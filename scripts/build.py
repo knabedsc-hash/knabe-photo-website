@@ -214,29 +214,35 @@ en_links = f'''<section class="page-intro container"><p class="eyebrow">RELATED 
 write_en("links.html", "Related Websites", "Laboratories and research centers connected with Kenta Watanabe’s appointments and research.", en_links)
 
 cover_images = [
-    ("2019ACSSustainChemEng", "2019", "ACS Sustainable Chemistry & Engineering", "Supplementary cover"),
-    ("2020ChemMater", "2020", "Chemistry of Materials", "Supplementary cover"),
-    ("2020ChemSci", "2020", "Chemical Science", "Outside front cover"),
-    ("2021ChemComm", "2021", "Chemical Communications", "Outside back cover"),
-    ("2023AdvEnergyMater", "2023", "Advanced Energy Materials", "Journal cover"),
-    ("2023BatteriesSupercaps", "2023", "Batteries & Supercaps", "Front cover"),
-    ("2024AdvMaterInterfaces", "2024", "Advanced Materials Interfaces", "Front cover"),
-    ("2024ChemSci", "2024", "Chemical Science", "Inside front cover"),
-    ("2024NanoLett", "2024", "Nano Letters", "Supplementary cover"),
-    ("2024SustainEnergyFuels", "2024", "Sustainable Energy & Fuels", "Inside front cover"),
-    ("2025ACSApplEnergyMater", "2025", "ACS Applied Energy Materials", "Supplementary cover"),
-    ("2025BatteriesSupercaps", "2025", "Batteries & Supercaps", "Front cover"),
-    ("2026BatteriesSupercaps", "2026", "Batteries & Supercaps", "Front cover"),
+    ("2019ACSSustainChemEng", "2019", "ACS Sustainable Chemistry & Engineering", "Supplementary cover", "K. Watanabe et al., ACS Sustainable Chemistry & Engineering 2019, 7, 9881–9887.", "https://doi.org/10.1021/acssuschemeng.9b00513", "© 2019 American Chemical Society."),
+    ("2020ChemMater", "2020", "Chemistry of Materials", "Supplementary cover", "K. Watanabe et al., Chemistry of Materials 2020, 32, 10524–10537.", "https://doi.org/10.1021/acs.chemmater.0c03461", "© 2020 American Chemical Society."),
+    ("2020ChemSci", "2020", "Chemical Science", "Outside front cover", "K. Watanabe et al., Chemical Science 2020, 11, 2330–2334.", "https://doi.org/10.1039/C9SC05909A", "© 2020 Royal Society of Chemistry."),
+    ("2021ChemComm", "2021", "Chemical Communications", "Outside back cover", "K. Watanabe et al., Chemical Communications 2021, 57, 323–326.", "https://doi.org/10.1039/D0CC07371G", "© 2021 Royal Society of Chemistry."),
+    ("2023AdvEnergyMater", "2023", "Advanced Energy Materials", "Journal cover", "H. Zhou et al., Advanced Energy Materials 2023, 13, 2370183.", "https://doi.org/10.1002/aenm.202370183", "© 2023 Wiley-VCH GmbH."),
+    ("2023BatteriesSupercaps", "2023", "Batteries & Supercaps", "Front cover", "Y. Yamada et al., Batteries & Supercaps 2023, 6, e202300412.", "https://doi.org/10.1002/batt.202300412", "© 2023 Wiley-VCH GmbH."),
+    ("2024AdvMaterInterfaces", "2024", "Advanced Materials Interfaces", "Front cover", "J. Nakayama et al., Advanced Materials Interfaces 2024, 11, 2470014.", "https://doi.org/10.1002/admi.202470014", "© 2024 The Authors. Published by Wiley-VCH GmbH. Licensed under CC BY-NC 4.0.", "https://creativecommons.org/licenses/by-nc/4.0/"),
+    ("2024ChemSci", "2024", "Chemical Science", "Inside front cover", "K. Watanabe et al., Chemical Science 2024, 15, 16025–16033.", "https://doi.org/10.1039/D4SC03978E", "© 2024 The Authors. Published by the Royal Society of Chemistry. Licensed under CC BY 4.0.", "https://creativecommons.org/licenses/by/4.0/"),
+    ("2024NanoLett", "2024", "Nano Letters", "Supplementary cover", "K. Watanabe et al., Nano Letters 2024, 24, 1916–1922.", "https://doi.org/10.1021/acs.nanolett.3c03982", "© 2024 American Chemical Society."),
+    ("2024SustainEnergyFuels", "2024", "Sustainable Energy & Fuels", "Inside front cover", "K. Watanabe et al., Sustainable Energy & Fuels 2024, 8, 1236–1244.", "https://doi.org/10.1039/D3SE01636F", "© 2024 The Authors. Published by the Royal Society of Chemistry. Licensed under CC BY 4.0.", "https://creativecommons.org/licenses/by/4.0/"),
+    ("2025ACSApplEnergyMater", "2025", "ACS Applied Energy Materials", "Supplementary cover", "K. Watanabe et al., ACS Applied Energy Materials 2025, 8, 2260.", "https://doi.org/10.1021/acsaem.4c02838", "© 2025 American Chemical Society."),
+    ("2025BatteriesSupercaps", "2025", "Batteries & Supercaps", "Front cover", "K. Watanabe et al., Batteries & Supercaps 2025, 8, e202580601.", "https://doi.org/10.1002/batt.202580601", "© 2025 Wiley-VCH GmbH."),
+    ("2026BatteriesSupercaps", "2026", "Batteries & Supercaps", "Front cover", "B. Y. Kang et al., Batteries & Supercaps 2026, 9, e70378.", "https://doi.org/10.1002/batt.70378", "© 2026 Wiley-VCH GmbH."),
 ]
 
 
 def gallery_cards(language):
     prefix = "" if language == "jp" else "../"
     cards = []
-    for stem, year, journal, cover_type in cover_images:
+    for cover in cover_images:
+        stem, year, journal, cover_type, citation, doi, credit, *license_url = cover
         labels = {"Supplementary cover": "サプリメンタリーカバー", "Outside front cover": "表紙（Outside front cover）", "Outside back cover": "裏表紙（Outside back cover）", "Journal cover": "ジャーナルカバー", "Front cover": "表紙（Front cover）", "Inside front cover": "表紙（Inside front cover）"}
         kind = labels[cover_type] if language == "jp" else cover_type
-        cards.append(f"""<article class="gallery-card"><div class="gallery-image-frame"><img src="{prefix}media/covers/{stem}.webp" alt="{esc(year + ' ' + journal + ' cover image')}" width="900" height="1200" loading="lazy"></div><div class="gallery-card-copy"><p class="eyebrow">{esc(year)} · {esc(kind.upper() if language == "en" else kind)}</p><h2>{esc(journal)}</h2></div></article>""")
+        credit_html = esc(credit)
+        if license_url:
+            license_name = "CC BY-NC 4.0" if "by-nc" in license_url[0] else "CC BY 4.0"
+            credit_html = credit_html.replace(license_name, f'<a href="{esc(license_url[0])}" target="_blank" rel="license noopener noreferrer">{license_name}</a>')
+        heading = "出典・著作権" if language == "jp" else "Source & copyright"
+        cards.append(f"""<article class="gallery-card"><div class="gallery-image-frame"><img src="{prefix}media/covers/{stem}.webp" alt="{esc(year + ' ' + journal + ' cover image')}" width="900" height="1200" loading="lazy"></div><div class="gallery-card-copy"><p class="eyebrow">{esc(year)} · {esc(kind.upper() if language == 'en' else kind)}</p><h2>{esc(journal)}</h2><div class="cover-credit"><p class="cover-credit-heading">{heading}</p><p class="cover-citation"><a href="{esc(doi)}" target="_blank" rel="noopener noreferrer">{esc(citation)} <span aria-hidden="true">↗</span></a></p><p class="cover-copyright">{credit_html}</p></div></div></article>""")
     return '<div class="gallery-grid">' + "".join(cards) + "</div>"
 
 

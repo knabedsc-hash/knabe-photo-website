@@ -20,6 +20,10 @@ assert "Related Websites" in (site / "en" / "links.html").read_text(encoding="ut
 assert "Hirayama Laboratory" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "水分解" in (site / "gallery.html").read_text(encoding="utf-8")
 assert "Research Video" in (site / "en" / "gallery.html").read_text(encoding="utf-8")
+assert (site / "gallery.html").read_text(encoding="utf-8").count('class="cover-credit"') == 13
+assert (site / "en" / "gallery.html").read_text(encoding="utf-8").count('class="cover-credit"') == 13
+assert "CC BY-NC 4.0" in (site / "gallery.html").read_text(encoding="utf-8")
+assert (site / "gallery.html").read_text(encoding="utf-8").count("CC BY 4.0") == 2
 assert len(list((site / "media" / "covers").glob("*.webp"))) == 13
 assert (site / "media" / "videos" / "rhcrox-agtao3.mp4").is_file()
 print("Static site validation passed.")
