@@ -18,6 +18,10 @@ assert (site / "style.css").stat().st_size > 1000
 assert "Relationship Between Contact Resistance" in (site / "publications.html").read_text(encoding="utf-8")
 assert "Related Websites" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "Hirayama Laboratory" in (site / "en" / "links.html").read_text(encoding="utf-8")
+assert "電気化学会" in (site / "links.html").read_text(encoding="utf-8")
+assert "The Solid State Ionics Society of Japan" in (site / "en" / "links.html").read_text(encoding="utf-8")
+assert "https://www.ssi-j.org/" in (site / "en" / "links.html").read_text(encoding="utf-8")
+assert "https://catsj.jp/en" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "水分解" in (site / "gallery.html").read_text(encoding="utf-8")
 assert "Research Video" in (site / "en" / "gallery.html").read_text(encoding="utf-8")
 assert (site / "gallery.html").read_text(encoding="utf-8").count('class="cover-credit"') == 13
