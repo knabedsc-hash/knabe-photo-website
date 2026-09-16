@@ -28,6 +28,10 @@ assert "https://www.ssi-j.org/" in (site / "en" / "links.html").read_text(encodi
 assert "https://catsj.jp/en" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "水分解" in (site / "gallery.html").read_text(encoding="utf-8")
 assert "Research Video" in (site / "en" / "gallery.html").read_text(encoding="utf-8")
+jp_profile = (site / "profile.html").read_text(encoding="utf-8")
+en_profile = (site / "en" / "profile.html").read_text(encoding="utf-8")
+assert jp_profile.index("2026年度 3・4Q") < jp_profile.index("2025年度 3・4Q")
+assert en_profile.index("2026, 3–4Q") < en_profile.index("2025, 3–4Q")
 assert (site / "gallery.html").read_text(encoding="utf-8").count('class="cover-credit"') == 13
 assert (site / "en" / "gallery.html").read_text(encoding="utf-8").count('class="cover-credit"') == 13
 assert "CC BY-NC 4.0" in (site / "gallery.html").read_text(encoding="utf-8")
