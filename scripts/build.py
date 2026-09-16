@@ -200,17 +200,21 @@ write_en("profile.html", "Profile", "Profile, appointments, education, service, 
 
 resource_sites = [("東京科学大学 平山研究室", "Hirayama Laboratory, Institute of Science Tokyo", "http://www.hirayama-cap.mct.isct.ac.jp/", "http://www.hirayama-cap.mct.isct.ac.jp/en/", "全固体電池と固体イオニクスに関する研究室", "Research group on all-solid-state batteries and solid-state ionics"), ("東京科学大学 全固体電池研究センター", "All-Solid-State Battery Research Center, Institute of Science Tokyo", "http://www.assb.iir.isct.ac.jp/", "http://www.assb.iir.isct.ac.jp/en/", "全固体電池の研究拠点", "Research center for all-solid-state batteries"), ("東京理科大学 工藤研究室", "Kudo Laboratory, Tokyo University of Science", "https://www.rs.kagu.tus.ac.jp/kudolab/", "https://www.rs.kagu.tus.ac.jp/kudolab/en/index.html", "光触媒・人工光合成に関する研究室", "Research group on photocatalysis and artificial photosynthesis"), ("産業技術総合研究所 ゼロエミッション国際共同研究センター", "Global Zero Emission Research Center, AIST", "https://www.gzr.aist.go.jp/?lang=ja", "https://www.gzr.aist.go.jp/en/", "ゼロエミッション技術の研究拠点", "Research center for zero-emission technologies"), ("電気化学会", "The Electrochemical Society of Japan", "https://www.electrochem.jp/", "https://www.electrochem.jp/english/", "電気化学に関する学術団体", "Academic society for electrochemistry"), ("日本固体イオニクス学会", "The Solid State Ionics Society of Japan", "https://www.ssi-j.org/", "https://www.ssi-j.org/", "固体イオニクスに関する学術団体", "Academic society for solid state ionics (Japanese website)"), ("触媒学会", "Catalysis Society of Japan", "https://catsj.jp/", "https://catsj.jp/en", "触媒科学に関する学術団体", "Academic society for catalysis")]
 
-def resource_cards(language):
+laboratory_sites = resource_sites[:4]
+academic_society_sites = resource_sites[4:]
+
+
+def resource_cards(language, sites):
     cards = []
-    for jp_name, en_name, jp_url, en_url, jp_description, en_description in resource_sites:
+    for jp_name, en_name, jp_url, en_url, jp_description, en_description in sites:
         name, url, description = (jp_name, jp_url, jp_description) if language == "jp" else (en_name, en_url, en_description)
         cards.append(f'''<article class="resource-card"><p class="eyebrow">RELATED WEBSITE</p><h2>{esc(name)}</h2><p>{esc(description)}</p><a class="text-link" href="{esc(url)}" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a></article>''')
     return '<div class="link-grid">' + "".join(cards) + "</div>"
 
-jp_links = f'''<section class="page-intro container"><p class="eyebrow">RELATED WEBSITES</p><h1>関連サイト</h1><p>所属・研究に関係する研究室、研究センター、学会のウェブサイト。</p></section><section class="container section links-section">{resource_cards("jp")}</section>'''
+jp_links = f'''<section class="page-intro container"><p class="eyebrow">RELATED WEBSITES</p><h1>関連サイト</h1><p>所属・研究に関係する研究室、研究センター、学会のウェブサイト。</p></section><section class="container section links-section"><div class="section-heading"><div><p class="eyebrow">LABORATORIES &amp; CENTERS</p><h2>研究室・センター</h2></div></div>{resource_cards("jp", laboratory_sites)}</section><section class="container section links-section"><div class="section-heading"><div><p class="eyebrow">ACADEMIC SOCIETIES</p><h2>学会</h2></div></div>{resource_cards("jp", academic_society_sites)}</section>'''
 write_jp("links.html", "関連サイト", "渡邊健太の所属・研究に関係する研究室、研究センター、学会のウェブサイト。", jp_links)
 
-en_links = f'''<section class="page-intro container"><p class="eyebrow">RELATED WEBSITES</p><h1>Related Websites</h1><p>Laboratories, research centers, and academic societies connected with my appointments and research.</p></section><section class="container section links-section">{resource_cards("en")}</section>'''
+en_links = f'''<section class="page-intro container"><p class="eyebrow">RELATED WEBSITES</p><h1>Related Websites</h1><p>Laboratories, research centers, and academic societies connected with my appointments and research.</p></section><section class="container section links-section"><div class="section-heading"><div><p class="eyebrow">LABORATORIES &amp; CENTERS</p><h2>Laboratories &amp; Centers</h2></div></div>{resource_cards("en", laboratory_sites)}</section><section class="container section links-section"><div class="section-heading"><div><p class="eyebrow">ACADEMIC SOCIETIES</p><h2>Academic Societies</h2></div></div>{resource_cards("en", academic_society_sites)}</section>'''
 write_en("links.html", "Related Websites", "Laboratories, research centers, and academic societies connected with Kenta Watanabe’s appointments and research.", en_links)
 
 cover_images = [
