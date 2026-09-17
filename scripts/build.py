@@ -52,7 +52,7 @@ def records(items, author_lines=False):
     for item in items:
         lines = []
         for index, line in enumerate(item):
-            class_name = ' class="record-authors"' if author_lines and index == 0 else ""
+            class_name = ' class="record-authors" style="font-weight:400"' if author_lines and index == 0 else ""
             lines.append("<p" + class_name + ">" + emphasize_authors(re.sub(r"[ \t]+\r?\n", "\n", line).strip()) + "</p>")
         list_items.append("<li>" + "".join(lines) + "</li>")
     return '<ol class="record-list">' + "".join(list_items) + "</ol>"

@@ -20,8 +20,8 @@ jp_publications = (site / "publications.html").read_text(encoding="utf-8")
 en_publications = (site / "en" / "publications.html").read_text(encoding="utf-8")
 assert "太字：渡邊健太" not in jp_publications
 assert "Bold: Kenta Watanabe" not in en_publications
-assert jp_publications.count('class="record-authors"') == 9
-assert en_publications.count('class="record-authors"') == 9
+assert jp_publications.count('class="record-authors" style="font-weight:400"') == 9
+assert en_publications.count('class="record-authors" style="font-weight:400"') == 9
 assert "Related Websites" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "Hirayama Laboratory" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "研究室・センター" in (site / "links.html").read_text(encoding="utf-8")
