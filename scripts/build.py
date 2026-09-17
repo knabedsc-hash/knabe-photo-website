@@ -47,11 +47,14 @@ def paper_markup(paper, index):
 </article>'''
 
 
-def records(items):
+def records(items, author_lines=False):
     list_items = []
     for item in items:
-        lines = "".join("<p>" + emphasize_authors(re.sub(r"[ \t]+\r?\n", "\n", line).strip()) + "</p>" for line in item)
-        list_items.append("<li>" + lines + "</li>")
+        lines = []
+        for index, line in enumerate(item):
+            class_name = ' class="record-authors"' if author_lines and index == 0 else ""
+            lines.append("<p" + class_name + ">" + emphasize_authors(re.sub(r"[ \t]+\r?\n", "\n", line).strip()) + "</p>")
+        list_items.append("<li>" + "".join(lines) + "</li>")
     return '<ol class="record-list">' + "".join(list_items) + "</ol>"
 
 
@@ -156,10 +159,10 @@ years = sorted({paper["year"] for paper in papers}, reverse=True)
 year_nav = '<nav class="year-nav" aria-label="Publication years">' + "".join(f'<a href="#year-{year}">{year}</a>' for year in years) + "</nav>"
 year_sections = "".join(f'<section class="year-section" id="year-{year}"><h2>{year}</h2>' + "".join(paper_markup(paper, papers.index(paper)) for paper in papers if paper["year"] == year) + "</section>" for year in years)
 
-jp_publications = f'''<section class="page-intro container"><p class="eyebrow">PUBLICATIONS</p><h1>論文・著書</h1><p>光電気化学、全固体電池、光触媒に関する研究成果。</p></section><div class="container"><nav class="subnav" aria-label="業績の種類"><a href="#articles">原著論文（{len(papers)}件）</a><a href="#books">著書・解説等</a><a href="#patents">特許</a></nav></div><div class="container content-layout">{year_nav}<div><section id="articles"><p class="muted">太字：渡邊健太　*：責任著者（原資料の表記に基づく）</p>{year_sections}</section><section class="group-section" id="books"><p class="eyebrow">BOOKS &amp; OTHER WRITINGS</p><h2>著書・解説等</h2>{records(data["books"])}</section><section class="group-section" id="patents"><p class="eyebrow">PATENTS</p><h2>特許</h2>{records(data["patents"])}</section></div></div>'''
+jp_publications = f'''<section class="page-intro container"><p class="eyebrow">PUBLICATIONS</p><h1>論文・著書</h1><p>光電気化学、全固体電池、光触媒に関する研究成果。</p></section><div class="container"><nav class="subnav" aria-label="業績の種類"><a href="#articles">原著論文（{len(papers)}件）</a><a href="#books">著書・解説等</a><a href="#patents">特許</a></nav></div><div class="container content-layout">{year_nav}<div><section id="articles">{year_sections}</section><section class="group-section" id="books"><p class="eyebrow">BOOKS &amp; OTHER WRITINGS</p><h2>著書・解説等</h2>{records(data["books"], author_lines=True)}</section><section class="group-section" id="patents"><p class="eyebrow">PATENTS</p><h2>特許</h2>{records(data["patents"], author_lines=True)}</section></div></div>'''
 write_jp("publications.html", "論文・著書", "渡邊健太の原著論文、著書・解説、特許。発表年別の研究業績一覧。", jp_publications)
 
-en_publications = f'''<section class="page-intro container"><p class="eyebrow">PUBLICATIONS</p><h1>Publications</h1><p>Research outputs in photoelectrochemistry, all-solid-state batteries, and photocatalysis.</p></section><div class="container"><nav class="subnav" aria-label="Publication types"><a href="#articles">Research articles ({len(papers)})</a><a href="#books">Books and other writings</a><a href="#patents">Patents</a></nav></div><div class="container content-layout">{year_nav}<div><section id="articles"><p class="muted">Bold: Kenta Watanabe. *: corresponding author, as shown in the source record.</p>{year_sections}</section><section class="group-section" id="books"><p class="eyebrow">BOOKS &amp; OTHER WRITINGS</p><h2>Books and Other Writings</h2>{records(data["books"])}</section><section class="group-section" id="patents"><p class="eyebrow">PATENTS</p><h2>Patents</h2>{records(data["patents"])}</section></div></div>'''
+en_publications = f'''<section class="page-intro container"><p class="eyebrow">PUBLICATIONS</p><h1>Publications</h1><p>Research outputs in photoelectrochemistry, all-solid-state batteries, and photocatalysis.</p></section><div class="container"><nav class="subnav" aria-label="Publication types"><a href="#articles">Research articles ({len(papers)})</a><a href="#books">Books and other writings</a><a href="#patents">Patents</a></nav></div><div class="container content-layout">{year_nav}<div><section id="articles">{year_sections}</section><section class="group-section" id="books"><p class="eyebrow">BOOKS &amp; OTHER WRITINGS</p><h2>Books and Other Writings</h2>{records(data["books"], author_lines=True)}</section><section class="group-section" id="patents"><p class="eyebrow">PATENTS</p><h2>Patents</h2>{records(data["patents"], author_lines=True)}</section></div></div>'''
 write_en("publications.html", "Publications", "Research articles, books, other writings, and patents by Kenta Watanabe.", en_publications)
 
 jp_grant_items = [("2026.04 — 2029.03", "科研費 基盤研究（S） / 研究分担者", "局所的イオンダイナミクスに基づく高イオン伝導体の創出"), ("2025.04 — 2028.03", "科研費 若手研究 / 研究代表者", "全固体電気化学系で動作するLiイオン脱挿入性p型半導体光電極の開発と動作原理解明"), ("2026.04 — 2028.03", "旭硝子財団 研究奨励 / 研究代表者", "全固体電気化学系で動作するLi⁺脱挿入性p型半導体光電極の開発と動作原理解明"), ("2026.04 — 2027.12", "加藤科学振興会 第35回研究助成金 / 研究代表者", "全固体電気化学系で機能するp型半導体光電極の開発と動作原理解明"), ("2026.07 — 2027.06", "東京科学大学 あすなろ研究奨励金 / 研究代表者", "全固体電気化学系で動作可能なLi⁺脱挿入性p型半導体光電極の開発と動作原理解明"), ("2025.09 — 2026.03", "東京科学大学 物質理工学院 研究賞助成 / 研究代表者", "走査型電子/プローブ顕微鏡を用いた全固体電池用複合体電極の微細構造と三次元的電子/イオン伝導経路の相関関係の解明"), ("2025.07 — 2026.03", "東京科学大学 社会変革チャレンジ賞 / 研究代表者", "新規光機能デバイスの創成を志向した全固体電気化学系で動作するLi⁺脱挿入性光電極の開発と動作原理解明")]
