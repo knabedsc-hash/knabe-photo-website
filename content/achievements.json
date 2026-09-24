@@ -1,10 +1,18 @@
 {
-  "updated": "2026-09-14",
+  "updated": "2026-09-24",
   "papers": [
+    {
+      "authors": "S. Kong, Z. Yu, K. Suzuki, S. Hori, S. Hiroi, K. Ohara, K. Watanabe, K. Nomoto, N. Matsui,* R. Kanno,*",
+      "title": "Screening Lithium-Ion Conductors Based on Local and Global Topology",
+      "citation": "J. Am. Chem. Soc. 2026, DOI 10.1021/jacs.6c00345.",
+      "year": "2026",
+      "note": "",
+      "url": ""
+    },
     {
       "authors": "K. Watanabe,* Y. Yamada, M. Shishido, Y. Wang, K. Murakami, R. Kanno, M. Hirayama",
       "title": "Relationship Between Contact Resistance in e–-Conductive Pathways and Mechanical Properties of Active Materials in Microstructurally-Controlled Composite Electrodes for Sulfide All-Solid-State Batteries",
-      "citation": "Batteries & Supercaps 2026, accepted.",
+      "citation": "Batteries & Supercaps 2026, 9, e70485.",
       "year": "2026",
       "note": "",
       "url": ""

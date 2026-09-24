@@ -261,11 +261,34 @@ def gallery_cards(language):
     return '<div class="gallery-grid">' + "".join(cards) + "</div>"
 
 
-jp_gallery = f"""<section class="page-intro container"><p class="eyebrow">GALLERY</p><h1>ギャラリー</h1><p>採択論文のカバーピクチャーと、研究に関する動画。</p></section><div class="container"><nav class="subnav" aria-label="ギャラリーの種類"><a href="#covers">カバーピクチャー</a><a href="#video">研究動画</a></nav><section class="gallery-section" id="covers"><div class="section-heading"><div><p class="eyebrow">JOURNAL COVERS</p><h2>カバーピクチャー</h2></div></div>{gallery_cards("jp")}</section><section class="gallery-section video-section" id="video"><div class="section-heading"><div><p class="eyebrow">RESEARCH VIDEO</p><h2>研究動画</h2></div></div><article class="video-gallery-card"><div class="video-gallery-copy"><p class="eyebrow">WATER SPLITTING</p><h3>Rh<sub>0.5</sub>Cr<sub>1.5</sub>O<sub>3</sub>/AgTaO<sub>3</sub>を用いた紫外光照射下での水分解</h3><p>紫外光照射下における光触媒水分解の様子。</p></div><video class="gallery-video" controls preload="metadata"><source src="media/videos/rhcrox-agtao3.mp4" type="video/mp4">お使いのブラウザは動画再生に対応していません。</video></article></section></div>"""
-write_jp("gallery.html", "ギャラリー", "渡邊健太の採択論文カバーピクチャーと研究動画。", jp_gallery)
+photo_images = [
+    ("20260914-hirayama-birthday", "2026.09.14", "平山先生誕生日会", "Professor Hirayama’s Birthday Celebration"),
+    ("20260401-dinner-with-kate", "2026.04.01", "Kateさんと食事会", "Dinner with Kate"),
+    ("20260124-kanno-70th-birthday", "2026.01.24", "菅野先生古希祝賀会", "Professor Kanno’s 70th Birthday Celebration"),
+    ("20250613-photocatalysis-symposium-gathering", "2025.06.13", "光がかかわる触媒化学シンポジウム後の飲み会", "Gathering after the Symposium on Light-Related Catalytic Chemistry"),
+    ("20250403-assb-center-members", "2025.04.03", "全固体電池研究センターメンバー", "All-Solid-State Battery Research Center Members"),
+    ("20250403-hirayama-lab-members", "2025.04.03", "平山研メンバー", "Hirayama Laboratory Members"),
+    ("20240411-assb-center-members", "2024.04.11", "全固体電池研究センターメンバー", "All-Solid-State Battery Research Center Members"),
+    ("20240411-hirayama-lab-members", "2024.04.11", "平山研メンバー", "Hirayama Laboratory Members"),
+    ("20240328-appreciation-party", "2024.03.28", "謝恩会", "Appreciation Party"),
+    ("20230220-welcome-and-farewell-party", "2023.02.20", "歓迎会&お疲れ様会", "Welcome and Farewell Party"),
+]
 
-en_gallery = f"""<section class="page-intro container"><p class="eyebrow">GALLERY</p><h1>Gallery</h1><p>Journal cover images and research videos.</p></section><div class="container"><nav class="subnav" aria-label="Gallery categories"><a href="#covers">Journal covers</a><a href="#video">Research video</a></nav><section class="gallery-section" id="covers"><div class="section-heading"><div><p class="eyebrow">JOURNAL COVERS</p><h2>Cover Images</h2></div></div>{gallery_cards("en")}</section><section class="gallery-section video-section" id="video"><div class="section-heading"><div><p class="eyebrow">RESEARCH VIDEO</p><h2>Research Video</h2></div></div><article class="video-gallery-card"><div class="video-gallery-copy"><p class="eyebrow">WATER SPLITTING</p><h3>Water splitting over Rh<sub>0.5</sub>Cr<sub>1.5</sub>O<sub>3</sub>/AgTaO<sub>3</sub> under ultraviolet irradiation</h3><p>Photocatalytic water splitting under ultraviolet irradiation.</p></div><video class="gallery-video" controls preload="metadata"><source src="../media/videos/rhcrox-agtao3.mp4" type="video/mp4">Your browser does not support video playback.</video></article></section></div>"""
-write_en("gallery.html", "Gallery", "Journal cover images and a research video by Kenta Watanabe.", en_gallery)
+
+def photo_cards(language):
+    prefix = "" if language == "jp" else "../"
+    cards = []
+    for stem, date, jp_caption, en_caption in photo_images:
+        caption = jp_caption if language == "jp" else en_caption
+        cards.append(f'''<article class="photo-card"><div class="photo-image-frame"><img src="{prefix}media/photos/{stem}.webp" alt="{esc(caption)}" width="1600" height="1200" loading="lazy"></div><div class="photo-card-copy"><p class="eyebrow">{esc(date)}</p><h3>{esc(caption)}</h3></div></article>''')
+    return '<div class="photo-grid">' + "".join(cards) + "</div>"
+
+
+jp_gallery = f"""<section class="page-intro container"><p class="eyebrow">GALLERY</p><h1>ギャラリー</h1><p>採択論文のカバーピクチャー、研究動画、研究活動の写真。</p></section><div class="container"><nav class="subnav" aria-label="ギャラリーの種類"><a href="#covers">カバーピクチャー</a><a href="#video">研究動画</a><a href="#photos">写真</a></nav><section class="gallery-section" id="covers"><div class="section-heading"><div><p class="eyebrow">JOURNAL COVERS</p><h2>カバーピクチャー</h2></div></div>{gallery_cards("jp")}</section><section class="gallery-section video-section" id="video"><div class="section-heading"><div><p class="eyebrow">RESEARCH VIDEO</p><h2>研究動画</h2></div></div><article class="video-gallery-card"><div class="video-gallery-copy"><p class="eyebrow">WATER SPLITTING</p><h3>Rh<sub>0.5</sub>Cr<sub>1.5</sub>O<sub>3</sub>/AgTaO<sub>3</sub>を用いた紫外光照射下での水分解</h3><p>紫外光照射下における光触媒水分解の様子。</p></div><video class="gallery-video" controls preload="metadata"><source src="media/videos/rhcrox-agtao3.mp4" type="video/mp4">お使いのブラウザは動画再生に対応していません。</video></article></section><section class="gallery-section photo-section" id="photos"><div class="section-heading"><div><p class="eyebrow">PHOTOS</p><h2>写真</h2></div></div>{photo_cards("jp")}</section></div>"""
+write_jp("gallery.html", "ギャラリー", "渡邊健太の採択論文カバーピクチャー、研究動画、研究活動の写真。", jp_gallery)
+
+en_gallery = f"""<section class="page-intro container"><p class="eyebrow">GALLERY</p><h1>Gallery</h1><p>Journal cover images, a research video, and photos from research activities.</p></section><div class="container"><nav class="subnav" aria-label="Gallery categories"><a href="#covers">Journal covers</a><a href="#video">Research video</a><a href="#photos">Photos</a></nav><section class="gallery-section" id="covers"><div class="section-heading"><div><p class="eyebrow">JOURNAL COVERS</p><h2>Cover Images</h2></div></div>{gallery_cards("en")}</section><section class="gallery-section video-section" id="video"><div class="section-heading"><div><p class="eyebrow">RESEARCH VIDEO</p><h2>Research Video</h2></div></div><article class="video-gallery-card"><div class="video-gallery-copy"><p class="eyebrow">WATER SPLITTING</p><h3>Water splitting over Rh<sub>0.5</sub>Cr<sub>1.5</sub>O<sub>3</sub>/AgTaO<sub>3</sub> under ultraviolet irradiation</h3><p>Photocatalytic water splitting under ultraviolet irradiation.</p></div><video class="gallery-video" controls preload="metadata"><source src="../media/videos/rhcrox-agtao3.mp4" type="video/mp4">Your browser does not support video playback.</video></article></section><section class="gallery-section photo-section" id="photos"><div class="section-heading"><div><p class="eyebrow">PHOTOS</p><h2>Photos</h2></div></div>{photo_cards("en")}</section></div>"""
+write_en("gallery.html", "Gallery", "Journal cover images, a research video, and photos from research activities by Kenta Watanabe.", en_gallery)
 
 write_jp("404.html", "ページが見つかりません", "お探しのページが見つかりませんでした。", '<section class="page-intro container"><p class="eyebrow">404</p><h1>ページが見つかりません</h1><p>上のメニューから、目的のページへお進みください。</p></section>')
 write_en("404.html", "Page Not Found", "The requested page could not be found.", '<section class="page-intro container"><p class="eyebrow">404</p><h1>Page Not Found</h1><p>Please use the menu to find the page you need.</p></section>')
