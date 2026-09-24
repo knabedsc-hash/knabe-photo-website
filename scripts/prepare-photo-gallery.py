@@ -22,7 +22,7 @@ PHOTO_SOURCES = {
     "20250403_平山研メンバー.jpg": "20250403-hirayama-lab-members",
     "20240411_全固体電池研究センターメンバー.jpg": "20240411-assb-center-members",
     "20240411_平山研メンバー.jpg": "20240411-hirayama-lab-members",
-    "240328_謝恩会.HEIC": "20240328-appreciation-party",
+    "20240328_謝恩会.jpeg": "20240328-appreciation-party",
     "20230220_歓迎会&お疲れ様会.jpg": "20230220-welcome-and-farewell-party",
 }
 
