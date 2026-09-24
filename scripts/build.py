@@ -280,7 +280,7 @@ def photo_cards(language):
     cards = []
     for stem, date, jp_caption, en_caption in photo_images:
         caption = jp_caption if language == "jp" else en_caption
-        cards.append(f'''<article class="photo-card"><div class="photo-image-frame"><img src="{prefix}media/photos/{stem}.webp" alt="{esc(caption)}" width="1600" height="1200" loading="lazy"></div><div class="photo-card-copy"><p class="eyebrow">{esc(date)}</p><h3>{esc(caption)}</h3></div></article>''')
+        cards.append(f'''<article class="photo-card"><div class="photo-image-frame"><img src="{prefix}media/photos/{stem}.webp" alt="{esc(caption)}" width="900" height="675" loading="lazy"></div><div class="photo-card-copy"><p class="eyebrow">{esc(date)}</p><h3>{esc(caption)}</h3></div></article>''')
     return '<div class="photo-grid">' + "".join(cards) + "</div>"
 
 
