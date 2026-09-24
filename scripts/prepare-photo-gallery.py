@@ -41,9 +41,9 @@ with tempfile.TemporaryDirectory(prefix="gallery-photos-") as temporary:
             subprocess.run([ffmpeg, "-y", "-i", str(source), "-frames:v", "1", str(image_source)], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         with Image.open(image_source) as original:
             image = ImageOps.exif_transpose(original).convert("RGB")
-            image.thumbnail((1800, 1350), Image.Resampling.LANCZOS)
+            image.thumbnail((900, 675), Image.Resampling.LANCZOS)
             target = TARGET / f"{stem}.webp"
-            image.save(target, "WEBP", quality=86, method=6)
+            image.save(target, "WEBP", quality=70, method=6)
             processed.append((source_name, target.name, image.size))
 for source_name, target_name, size in processed:
     print(f"{source_name} -> {target_name}: {size[0]}x{size[1]}")
