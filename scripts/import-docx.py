@@ -5,6 +5,23 @@ import re
 from docx import Document
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def title_key(value):
+    return re.sub(r"\s+", " ", value).strip().casefold()
+
+
+previous_data_path = ROOT / "content" / "achievements.json"
+previous_urls = {}
+if previous_data_path.is_file():
+    previous_data = json.loads(previous_data_path.read_text(encoding="utf-8"))
+    previous_urls = {
+        title_key(paper["title"]): paper["url"]
+        for paper in previous_data.get("papers", [])
+        if paper.get("url")
+    }
+
+
 paragraphs = [p.text.strip() for p in Document(ROOT / "業績リスト.docx").paragraphs if p.text.strip()]
 
 def section(start, end):
@@ -26,7 +43,8 @@ for lines in records(section("査読付原著論文", "総説・解説")):
     year = re.search(r"20\d{2}", citation).group()
     note = citation[citation.index("(selected"):].strip() if "(selected" in citation else ""
     citation = re.sub(r"\s*IF\s*=\s*(?:[\d.]+|N/A)", "", citation.split("(selected")[0]).strip()
-    papers.append(dict(authors=authors.rstrip(" ,"), title=title.strip("“” \""), citation=citation, year=year, note=note, url=""))
+    title = title.strip("“” \"")
+    papers.append(dict(authors=authors.rstrip(" ,"), title=title, citation=citation, year=year, note=note, url=previous_urls.get(title_key(title), "")))
 
 teaching_lines = paragraphs[paragraphs.index("＜担当授業＞") + 1:]
 teaching = [
