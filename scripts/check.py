@@ -31,6 +31,10 @@ assert jp_publications.count('class="citation" lang="en"><a href="https://') == 
 assert en_publications.count('class="citation" lang="en"><a href="https://') == len(data["papers"])
 assert 'target="_blank" rel="noopener noreferrer"' in jp_publications
 assert 'target="_blank" rel="noopener noreferrer"' in en_publications
+assert jp_publications.count('class="book-citation-link"') == 7
+assert en_publications.count('class="book-citation-link"') == 7
+assert 'https://onlinelibrary.wiley.com/doi/abs/10.1002/9781394233847.ch4' in jp_publications
+assert 'https://catsj.jp/jnl/pageview?articlecd=62990022000' in en_publications
 assert "Related Websites" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "Hirayama Laboratory" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "研究室・センター" in (site / "links.html").read_text(encoding="utf-8")
