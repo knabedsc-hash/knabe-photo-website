@@ -39,11 +39,14 @@ def paper_markup(paper, index):
     note = ""
     if paper.get("note"):
         note = '<p class="cover-note">' + esc(paper["note"]) + "</p>"
+    citation = esc(paper["citation"])
+    if paper.get("url"):
+        citation = f'<a href="{esc(paper["url"])}" target="_blank" rel="noopener noreferrer">{citation}</a>'
     return f'''<article class="paper" id="{paper_anchor(paper, index)}">
   <div class="paper-meta"><span>{esc(paper["year"])}</span><span>RESEARCH ARTICLE</span></div>
   <h3 lang="en">{esc(paper["title"])}</h3>
   <p class="authors" lang="en">{emphasize_authors(paper["authors"])}</p>
-  <p class="citation" lang="en">{esc(paper["citation"])}</p>{note}
+  <p class="citation" lang="en">{citation}</p>{note}
 </article>'''
 
 

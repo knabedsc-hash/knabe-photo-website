@@ -1,7 +1,10 @@
 """Static-site validation for the generated public output."""
 from pathlib import Path
+import json
 
-site = Path(__file__).resolve().parents[1] / "site"
+root = Path(__file__).resolve().parents[1]
+site = root / "site"
+data = json.loads((root / "content" / "achievements.json").read_text(encoding="utf-8"))
 japanese_pages = ["index.html", "publications.html", "activities.html", "profile.html", "gallery.html", "links.html", "404.html"]
 english_pages = ["index.html", "publications.html", "activities.html", "profile.html", "gallery.html", "links.html", "404.html"]
 for page in japanese_pages:
@@ -22,6 +25,12 @@ assert "太字：渡邊健太" not in jp_publications
 assert "Bold: Kenta Watanabe" not in en_publications
 assert jp_publications.count('class="record-authors" style="font-weight:400"') == 9
 assert en_publications.count('class="record-authors" style="font-weight:400"') == 9
+assert len(data["papers"]) == 38
+assert all(paper["url"].startswith("https://") for paper in data["papers"])
+assert jp_publications.count('class="citation" lang="en"><a href="https://') == len(data["papers"])
+assert en_publications.count('class="citation" lang="en"><a href="https://') == len(data["papers"])
+assert 'target="_blank" rel="noopener noreferrer"' in jp_publications
+assert 'target="_blank" rel="noopener noreferrer"' in en_publications
 assert "Related Websites" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "Hirayama Laboratory" in (site / "en" / "links.html").read_text(encoding="utf-8")
 assert "研究室・センター" in (site / "links.html").read_text(encoding="utf-8")
