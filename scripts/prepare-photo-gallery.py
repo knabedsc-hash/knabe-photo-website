@@ -15,8 +15,10 @@ import imageio_ffmpeg
 
 PHOTO_SOURCES = {
     "20260914_平山先生誕生日会.jpg": "20260914-hirayama-birthday",
-    "20260401_Kateさんと食事会.jpg": "20260401-dinner-with-kate",
+    "2026814_Florenceさん（短期留学者）とお出かけ.jpg": "20260814-outing-with-florence",
+    "20260401_Kateさん（短期留学者）と食事会.jpg": "20260401-dinner-with-kate",
     "20260124_菅野先生古希祝賀会.JPG": "20260124-kanno-70th-birthday",
+    "20250626_社会変革チャレンジ賞表彰式.jpg": "20250626-social-transformation-award",
     "20250613_光がかかわる触媒化学シンポジウム後の飲み会.jpg": "20250613-photocatalysis-symposium-gathering",
     "20250403_全固体電池研究センターメンバー.jpg": "20250403-assb-center-members",
     "20250403_平山研メンバー.jpg": "20250403-hirayama-lab-members",
@@ -24,6 +26,8 @@ PHOTO_SOURCES = {
     "20240411_平山研メンバー.jpg": "20240411-hirayama-lab-members",
     "20240328_謝恩会.jpeg": "20240328-appreciation-party",
     "20230220_歓迎会&お疲れ様会.jpg": "20230220-welcome-and-farewell-party",
+    "20221222_渡邊の送別会.JPG": "20221222-watanabe-farewell-party",
+    "20211217_産総研人工光合成研究チーム集合写真.jpeg": "20211217-aist-artificial-photosynthesis-team",
 }
 
 TARGET.mkdir(parents=True, exist_ok=True)

@@ -54,7 +54,7 @@ teaching = [
 ]
 
 data = {
-    "updated": "2026-09-24",
+    "updated": "2026-09-29",
     "papers": papers,
     "books": records(section("著書", "国際会議プロシーディングス")),
     "patents": records(section("特許", "＜受賞＞")),
