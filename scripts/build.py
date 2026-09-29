@@ -281,8 +281,10 @@ def gallery_cards(language):
 
 photo_images = [
     ("20260914-hirayama-birthday", "2026.09.14", "平山先生誕生日会", "Professor Hirayama’s Birthday Celebration"),
-    ("20260401-dinner-with-kate", "2026.04.01", "Kateさんと食事会", "Dinner with Kate"),
+    ("20260814-outing-with-florence", "2026.08.14", "Florenceさん（短期留学者）とお出かけ", "Outing with Florence (Visiting Student)"),
+    ("20260401-dinner-with-kate", "2026.04.01", "Kateさん（短期留学者）と食事会", "Dinner with Kate (Visiting Student)"),
     ("20260124-kanno-70th-birthday", "2026.01.24", "菅野先生古希祝賀会", "Professor Kanno’s 70th Birthday Celebration"),
+    ("20250626-social-transformation-award", "2025.06.26", "社会変革チャレンジ賞表彰式", "Social Transformation Challenge Award Ceremony"),
     ("20250613-photocatalysis-symposium-gathering", "2025.06.13", "光がかかわる触媒化学シンポジウム後の飲み会", "Gathering after the Symposium on Light-Related Catalytic Chemistry"),
     ("20250403-assb-center-members", "2025.04.03", "全固体電池研究センターメンバー", "Research Center for All-Solid-State Battery Members"),
     ("20250403-hirayama-lab-members", "2025.04.03", "平山研メンバー", "Hirayama Laboratory Members"),
@@ -290,6 +292,8 @@ photo_images = [
     ("20240411-hirayama-lab-members", "2024.04.11", "平山研メンバー", "Hirayama Laboratory Members"),
     ("20240328-appreciation-party", "2024.03.28", "謝恩会", "Appreciation Party"),
     ("20230220-welcome-and-farewell-party", "2023.02.20", "歓迎会&お疲れ様会", "Welcome and Farewell Party"),
+    ("20221222-watanabe-farewell-party", "2022.12.22", "渡邊の送別会", "Farewell Party for Kenta Watanabe"),
+    ("20211217-aist-artificial-photosynthesis-team", "2021.12.17", "産総研人工光合成研究チーム集合写真", "AIST Artificial Photosynthesis Research Team"),
 ]
 
 
