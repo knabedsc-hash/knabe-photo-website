@@ -172,7 +172,7 @@ en_home = f'''<section class="hero container"><div class="hero-copy">
 </div></div></section>
 <section class="container section"><div class="section-heading"><div><p class="eyebrow">SELECTED PUBLICATIONS</p><h2>Selected Publications</h2></div><a class="text-link" href="publications.html">All publications <span aria-hidden="true">↗</span></a></div>{featured_markup}</section>
 <section class="container section recent-section"><div><p class="eyebrow">RECENT ACTIVITIES</p><h2>Recent Activities</h2><a class="text-link" href="activities.html">View activities <span aria-hidden="true">↗</span></a></div><div class="news-list">
-<article><time datetime="2026-10-02">2026.10.02</time><div><span class="tag">AWARD &amp; RESEARCH FUNDING</span><h3>2026 Research Encouragement Award, School of Materials and Chemical Technology, Institute of Science Tokyo</h3><p>Elucidating the relationship between mechanical properties and contact resistance in composite electrodes for all-solid-state batteries using scanning electron/probe microscopy. Research Award Grant for fiscal year 2026: JPY 75,000 (Principal Investigator).</p></div></article>
+<article><time datetime="2026-10-02">2026.10.02</time><div><span class="tag">AWARD &amp; RESEARCH FUNDING</span><h3>2026 Research Encouragement Award, School of Materials and Chemical Technology, Institute of Science Tokyo</h3><p>Elucidating the relationship between mechanical properties and contact resistance in composite electrodes for all-solid-state batteries using scanning electron/probe microscopy. Research Award Grant for fiscal year 2026 (Principal Investigator).</p></div></article>
 <article><time datetime="2026-09">2026.09</time><div><span class="tag">PUBLICATION</span><h3>Paper accepted by Batteries &amp; Supercaps</h3><p>Contact resistance and mechanical properties in microstructure-controlled composite electrodes for all-solid-state batteries.</p></div></article>
 <article><time datetime="2026-07">2026.07</time><div><span class="tag">RESEARCH FUNDING</span><h3>Institute of Science Tokyo Asunaro Research Grant</h3><p>Development and operating principles of a lithium-ion-deintercalating p-type semiconductor photoelectrode for all-solid-state electrochemical systems.</p></div></article>
 <article><time datetime="2025-12-12">2025.12.12</time><div><span class="tag">INVITED TALK</span><h3>Materials Research Meeting 2025</h3><p>Photoelectrochemical Reactions in All-Solid-State Systems toward Solar Energy Conversion and Storage</p></div></article>
@@ -207,12 +207,12 @@ def grant_grid(items):
 jp_grant_items.insert(0, (
     "2026年度",
     "東京科学大学 物質理工学院 研究賞助成 / 研究代表者",
-    "助成額：7.5万円。走査型電子/プローブ顕微鏡による全固体電池用複合体電極内の機械特性と接触抵抗の相関関係の解明",
+    "走査型電子/プローブ顕微鏡による全固体電池用複合体電極内の機械特性と接触抵抗の相関関係の解明",
 ))
 en_grant_items.insert(0, (
     "Fiscal year 2026",
     "School of Materials and Chemical Technology, Institute of Science Tokyo Research Award Grant / Principal Investigator",
-    "Grant amount: JPY 75,000. Elucidating the relationship between mechanical properties and contact resistance in composite electrodes for all-solid-state batteries using scanning electron/probe microscopy",
+    "Elucidating the relationship between mechanical properties and contact resistance in composite electrodes for all-solid-state batteries using scanning electron/probe microscopy",
 ))
 
 award_translations = {
