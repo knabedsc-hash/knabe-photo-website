@@ -49,8 +49,14 @@ assert "水分解" in (site / "gallery.html").read_text(encoding="utf-8")
 assert "Research Video" in (site / "en" / "gallery.html").read_text(encoding="utf-8")
 assert "写真" in (site / "gallery.html").read_text(encoding="utf-8")
 assert "Photos" in (site / "en" / "gallery.html").read_text(encoding="utf-8")
-assert (site / "gallery.html").read_text(encoding="utf-8").count('class="photo-card"') == 14
-assert (site / "en" / "gallery.html").read_text(encoding="utf-8").count('class="photo-card"') == 14
+for page, prefix in [(site / "gallery.html", ""), (site / "en" / "gallery.html", "../")]:
+    gallery_html = page.read_text(encoding="utf-8")
+    assert 'id="photo-password-form"' in gallery_html
+    assert 'type="password"' in gallery_html
+    assert 'id="photo-gallery" hidden' in gallery_html
+    assert f'data-photo-bundle="{prefix}media/photos/protected.json"' in gallery_html
+    assert f'src="{prefix}gallery-photos.js" defer' in gallery_html
+    assert 'class="photo-card"' not in gallery_html
 assert "asunar" not in (site / "gallery.html").read_text(encoding="utf-8").lower()
 jp_profile = (site / "profile.html").read_text(encoding="utf-8")
 en_profile = (site / "en" / "profile.html").read_text(encoding="utf-8")
@@ -62,6 +68,17 @@ assert "CC BY-NC 4.0" in (site / "gallery.html").read_text(encoding="utf-8")
 assert (site / "gallery.html").read_text(encoding="utf-8").count("CC BY 4.0") == 2
 assert len(list((site / "media" / "covers").glob("*.webp"))) == 13
 assert (site / "media" / "videos" / "rhcrox-agtao3.mp4").is_file()
-assert len(list((site / "media" / "photos").glob("*.webp"))) == 14
-assert (site / "media" / "photos" / "20260914-hirayama-birthday.webp").is_file()
+assert {path.name for path in (site / "media" / "photos").iterdir()} == {"protected.json"}
+bundle = json.loads((site / "media" / "photos" / "protected.json").read_text(encoding="utf-8"))
+assert bundle["algorithm"] == "AES-GCM" and bundle["iterations"] == 600_000
+assert "photos" not in bundle and len(bundle["ciphertext"]) > 1000
+assert (site / "gallery-photos.js").is_file()
+# Fail if a later media update accidentally publishes the local password or photos.
+password_file = root / ".private" / "gallery-photo-password.txt"
+password = password_file.read_text(encoding="utf-8").rstrip("\r\n").encode("utf-8") if password_file.is_file() else None
+for public_file in site.rglob("*"):
+    if public_file.is_file() and public_file.suffix != ".mp4":
+        public_bytes = public_file.read_bytes()
+        assert password is None or password not in public_bytes, public_file
+        assert b"media/photos/20" not in public_bytes, public_file
 print("Static site validation passed.")

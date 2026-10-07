@@ -7,7 +7,7 @@ from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "Photo"
-TARGET = ROOT / "site" / "media" / "photos"
+TARGET = ROOT / ".private" / "gallery-photos"
 PRIVATE_TOOLS = ROOT / ".private" / "gallery-tools"
 if PRIVATE_TOOLS.is_dir():
     sys.path.insert(0, str(PRIVATE_TOOLS))
@@ -52,3 +52,5 @@ with tempfile.TemporaryDirectory(prefix="gallery-photos-") as temporary:
 for source_name, target_name, size in processed:
     print(f"{source_name} -> {target_name}: {size[0]}x{size[1]}")
 print(f"Prepared {len(processed)} gallery photos.")
+from gallery_photos import build_protected_photos
+build_protected_photos()
