@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29",
+  "updated": "2026-10-07",
   "papers": [
     {
       "authors": "S. Kong, Z. Yu, K. Suzuki, S. Hori, S. Hiroi, K. Ohara, K. Watanabe, K. Nomoto, N. Matsui,* R. Kanno,*",
@@ -353,6 +353,12 @@
     ]
   ],
   "awards": [
+    [
+      "2026年度 東京科学大学物質理工学院・研究奨励賞",
+      "渡邊健太",
+      "“走査型電子/プローブ顕微鏡による全固体電池用複合体電極内の機械特性と接触抵抗の相関関係の解明”",
+      "2026年10月2日"
+    ],
     [
       "2025年度 東京科学大学物質理工学院・研究奨励賞",
       "渡邊健太",
@@ -920,14 +926,7 @@
   ],
   "teaching": [
     {
-      "term": "2023, 1Q",
-      "code": "CAP.F301",
-      "name": "応用化学実験第三",
-      "english": "Chemical Science and Engineering Laboratory III",
-      "affiliation": "東京工業大学 物質理工学院 応用化学系"
-    },
-    {
-      "term": "2024, 3,4Q",
+      "term": "2026, 3,4Q",
       "code": "CAP.F304",
       "name": "応用化学実験第四",
       "english": "Chemical Science and Engineering Laboratory IV",
@@ -941,11 +940,18 @@
       "affiliation": "東京科学大学 物質理工学院 応用化学系"
     },
     {
-      "term": "2026, 3,4Q",
+      "term": "2024, 3,4Q",
       "code": "CAP.F304",
       "name": "応用化学実験第四",
       "english": "Chemical Science and Engineering Laboratory IV",
       "affiliation": "東京科学大学 物質理工学院 応用化学系"
+    },
+    {
+      "term": "2023, 1Q",
+      "code": "CAP.F301",
+      "name": "応用化学実験第三",
+      "english": "Chemical Science and Engineering Laboratory III",
+      "affiliation": "東京工業大学 物質理工学院 応用化学系"
     }
   ]
 }

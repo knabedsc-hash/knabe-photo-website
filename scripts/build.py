@@ -1,6 +1,7 @@
 """Generate the dependency-free bilingual static website for GitHub Pages."""
 from pathlib import Path
 from html import escape
+from datetime import date
 import json
 import re
 
@@ -11,6 +12,8 @@ OUT.mkdir(exist_ok=True)
 EN_OUT.mkdir(exist_ok=True)
 data = json.loads((ROOT / "content" / "achievements.json").read_text(encoding="utf-8"))
 last_updated = data["updated"].replace("-", ".")
+updated_date = date.fromisoformat(data["updated"])
+last_updated_en = f"{updated_date:%B} {updated_date.day}, {updated_date.year}"
 
 
 def esc(value):
@@ -129,7 +132,7 @@ def english_document(filename, title, description, body):
   </div></header>
   <main id="main">{body}</main>
   <section class="contact-band" aria-label="Researcher profiles"><div class="container contact-inner"><div><p class="eyebrow">CONNECT</p><p>Researcher profiles</p></div><div class="footer-links"><a href="https://orcid.org/0000-0003-0827-7381" target="_blank" rel="noopener noreferrer">ORCID ↗</a><a href="https://researchmap.jp/waken-photo?lang=en" target="_blank" rel="noopener noreferrer">researchmap ↗</a><a href="https://scholar.google.co.jp/citations?hl=ja&amp;view_op=list_works&amp;gmla=AHoSzlWOcv6OxsI3GazzPc9sTU87xCGglGpPowY-TIQJhBkRsllOkELvwh2yrKblA5T1ToyBhI6BQ6srQDuyRiWYpx4tVWUJ6Z4Wwbrcz_eLQ1U&amp;user=OOtNyewAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a><a href="https://www.linkedin.com/in/kenta-watanabe-5ab557304/?locale=en-US" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></section>
-  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Kenta Watanabe</span><span>Information verified: September 14, 2026</span><a href="#main">Back to top ↑</a></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><span>© 2026 Kenta Watanabe</span><span>Information verified: {last_updated_en}</span><a href="#main">Back to top ↑</a></div></footer>
 </body></html>'''
 
 
@@ -169,6 +172,7 @@ en_home = f'''<section class="hero container"><div class="hero-copy">
 </div></div></section>
 <section class="container section"><div class="section-heading"><div><p class="eyebrow">SELECTED PUBLICATIONS</p><h2>Selected Publications</h2></div><a class="text-link" href="publications.html">All publications <span aria-hidden="true">↗</span></a></div>{featured_markup}</section>
 <section class="container section recent-section"><div><p class="eyebrow">RECENT ACTIVITIES</p><h2>Recent Activities</h2><a class="text-link" href="activities.html">View activities <span aria-hidden="true">↗</span></a></div><div class="news-list">
+<article><time datetime="2026-10-02">2026.10.02</time><div><span class="tag">AWARD &amp; RESEARCH FUNDING</span><h3>2026 Research Encouragement Award, School of Materials and Chemical Technology, Institute of Science Tokyo</h3><p>Elucidating the relationship between mechanical properties and contact resistance in composite electrodes for all-solid-state batteries using scanning electron/probe microscopy. Research Award Grant for fiscal year 2026: JPY 75,000 (Principal Investigator).</p></div></article>
 <article><time datetime="2026-09">2026.09</time><div><span class="tag">PUBLICATION</span><h3>Paper accepted by Batteries &amp; Supercaps</h3><p>Contact resistance and mechanical properties in microstructure-controlled composite electrodes for all-solid-state batteries.</p></div></article>
 <article><time datetime="2026-07">2026.07</time><div><span class="tag">RESEARCH FUNDING</span><h3>Institute of Science Tokyo Asunaro Research Grant</h3><p>Development and operating principles of a lithium-ion-deintercalating p-type semiconductor photoelectrode for all-solid-state electrochemical systems.</p></div></article>
 <article><time datetime="2025-12-12">2025.12.12</time><div><span class="tag">INVITED TALK</span><h3>Materials Research Meeting 2025</h3><p>Photoelectrochemical Reactions in All-Solid-State Systems toward Solar Energy Conversion and Storage</p></div></article>
@@ -200,10 +204,31 @@ en_grant_items = [("2026.04 — 2029.03", "JSPS KAKENHI Grant-in-Aid for Scienti
 def grant_grid(items):
     return '<div class="grant-grid">' + "".join(f'<article class="grant"><span class="eyebrow">{esc(period)}</span><h3>{esc(kind)}</h3><p>{esc(topic)}</p></article>' for period, kind, topic in items) + "</div>"
 
+jp_grant_items.insert(0, (
+    "2026年度",
+    "東京科学大学 物質理工学院 研究賞助成 / 研究代表者",
+    "助成額：7.5万円。走査型電子/プローブ顕微鏡による全固体電池用複合体電極内の機械特性と接触抵抗の相関関係の解明",
+))
+en_grant_items.insert(0, (
+    "Fiscal year 2026",
+    "School of Materials and Chemical Technology, Institute of Science Tokyo Research Award Grant / Principal Investigator",
+    "Grant amount: JPY 75,000. Elucidating the relationship between mechanical properties and contact resistance in composite electrodes for all-solid-state batteries using scanning electron/probe microscopy",
+))
+
+award_translations = {
+    "2026年度 東京科学大学物質理工学院・研究奨励賞": [
+        "2026 Research Encouragement Award, School of Materials and Chemical Technology, Institute of Science Tokyo",
+        "Kenta Watanabe",
+        "Elucidating the relationship between mechanical properties and contact resistance in composite electrodes for all-solid-state batteries using scanning electron/probe microscopy",
+        "October 2, 2026",
+    ],
+}
+en_awards = [award_translations.get(award[0], award) for award in data["awards"]]
+
 jp_activities = f'''<section class="page-intro container"><p class="eyebrow">ACTIVITIES</p><h1>研究活動</h1><p>学会発表、受賞、研究助成。</p></section><div class="container"><nav class="subnav" aria-label="研究活動の種類"><a href="#talks">招待講演・学会発表</a><a href="#awards">受賞</a><a href="#funding">研究助成</a></nav><section class="group-section" id="talks"><p class="eyebrow">TALKS &amp; PRESENTATIONS</p><h2>招待講演</h2>{records(data["invited"], author_lines=True)}<details class="disclosure"><summary>国際学会発表（{len(data["international"])}件）</summary>{records(data["international"], author_lines=True)}</details><details class="disclosure"><summary>国内学会発表（{len(data["domestic"])}件）</summary>{records(data["domestic"], author_lines=True)}</details></section><section class="group-section" id="awards"><p class="eyebrow">AWARDS</p><h2>受賞</h2>{records(data["awards"])}</section><section class="group-section" id="funding"><p class="eyebrow">RESEARCH FUNDING</p><h2>研究助成</h2>{grant_grid(jp_grant_items)}</section></div>'''
 write_jp("activities.html", "研究活動", "渡邊健太の招待講演、国際・国内学会発表、受賞、競争的研究資金。", jp_activities)
 
-en_activities = f'''<section class="page-intro container"><p class="eyebrow">ACTIVITIES</p><h1>Activities</h1><p>Conference presentations, awards, and research funding.</p></section><div class="container"><nav class="subnav" aria-label="Activity types"><a href="#talks">Talks and presentations</a><a href="#awards">Awards</a><a href="#funding">Research funding</a></nav><section class="group-section" id="talks"><p class="eyebrow">TALKS &amp; PRESENTATIONS</p><h2>Invited Talks</h2>{records(data["invited"], author_lines=True)}<details class="disclosure"><summary>International Conference Presentations ({len(data["international"])})</summary>{records(data["international"], author_lines=True)}</details><details class="disclosure"><summary>Domestic Conference Presentations ({len(data["domestic"])})</summary>{records(data["domestic"], author_lines=True)}</details></section><section class="group-section" id="awards"><p class="eyebrow">AWARDS</p><h2>Awards</h2>{records(data["awards"])}</section><section class="group-section" id="funding"><p class="eyebrow">RESEARCH FUNDING</p><h2>Research Funding</h2>{grant_grid(en_grant_items)}</section></div>'''
+en_activities = f'''<section class="page-intro container"><p class="eyebrow">ACTIVITIES</p><h1>Activities</h1><p>Conference presentations, awards, and research funding.</p></section><div class="container"><nav class="subnav" aria-label="Activity types"><a href="#talks">Talks and presentations</a><a href="#awards">Awards</a><a href="#funding">Research funding</a></nav><section class="group-section" id="talks"><p class="eyebrow">TALKS &amp; PRESENTATIONS</p><h2>Invited Talks</h2>{records(data["invited"], author_lines=True)}<details class="disclosure"><summary>International Conference Presentations ({len(data["international"])})</summary>{records(data["international"], author_lines=True)}</details><details class="disclosure"><summary>Domestic Conference Presentations ({len(data["domestic"])})</summary>{records(data["domestic"], author_lines=True)}</details></section><section class="group-section" id="awards"><p class="eyebrow">AWARDS</p><h2>Awards</h2>{records(en_awards)}</section><section class="group-section" id="funding"><p class="eyebrow">RESEARCH FUNDING</p><h2>Research Funding</h2>{grant_grid(en_grant_items)}</section></div>'''
 write_en("activities.html", "Activities", "Conference presentations, awards, and research funding of Kenta Watanabe.", en_activities)
 
 def teaching_sort_key(course):
