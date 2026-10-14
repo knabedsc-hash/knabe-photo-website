@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07",
+  "updated": "2026-10-14",
   "papers": [
     {
       "authors": "S. Kong, Z. Yu, K. Suzuki, S. Hori, S. Hiroi, K. Ohara, K. Watanabe, K. Nomoto, N. Matsui,* R. Kanno,*",
@@ -443,6 +443,16 @@
     ]
   ],
   "international": [
+    [
+      "M. Hirayama, A. Domae, J. Ahn, T. Goto, K. Watanabe, R. Kanno, M. Matsuura, H. Tamatsukuri, Y. Nishigaki, K. Gotoh,",
+      "\"Understanding Lithium-Ion Transport Mechanisms Based on Experimental Diffusion Measurements in Argyrodite-Type Solid Electrolytes\",",
+      "77th Annual Meeting of the International Society of Electrochemistry, Sep. 8. 2026. (International Convention Centre Sydney, Australia)"
+    ],
+    [
+      "Y. Li , K. Yamanaka, K. Watanabe, K. Shimizu, K. Tamura, K. Suzuki, R. Kanno, M. Hirayama,",
+      "\"Observation of Cathode/Electrolyte Interface Structures in High-Voltage Degradation of Sulfide-Based All-Solid-State Batteries using Thin-Film Model Cell\",",
+      "77th Annual Meeting of the International Society of Electrochemistry, Sep. 7. 2026. (International Convention Centre Sydney, Australia)"
+    ],
     [
       "M. Hirayama, H. Zhou, K. Watanabe, R. Kanno, N. L. Yamada,",
       "\"Probing CEI Nanostructure and Intercalation Behavior at Li-Ion Battery Cathode Interfaces by In Situ Neutron Reflectometry\",",
